@@ -6,7 +6,6 @@
 
 Here to build a small project as a test for UNI internship.
 
-![alt-text](https://github.com/vinnovateit/smack_my_bitch_up/blob/master/public/design/implemented%20design%20of%20landing%20page.gif)
 
 ## Getting Started
 
