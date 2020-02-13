@@ -1,0 +1,46 @@
+
+/*THIS IS THE BLOCK FOR THE CSS OF GRID*/
+
+.parent {
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+grid-template-rows: repeat(10, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { 
+	grid-area: 1 / 1 / 2 / 11; 
+	background-color:#FFDE72; 
+}
+.div2 {
+
+ grid-area: 2 / 1 / 11 / 11;
+
+  }
+
+.div3 { 
+	grid-area: 4 / 3 / 9 / 9;
+	padding: 30px;
+	grid-area: 4 / 3 / 9 / 9;
+	box-shadow: 0.01px 0.01px 3px 0.3px black;
+	border-radius: 10px;
+ }
+
+
+/*THE BLOCK FOR GRID CSS FINISHES HERE*/
+
+#submit-button-box
+{
+	text-align: center;
+
+}
+
+#form-btn-submit
+{
+	margin-top: 15px;
+
+}
+
+
+	
