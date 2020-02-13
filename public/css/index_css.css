@@ -38,9 +38,21 @@ grid-row-gap: 0px;
 
 #form-btn-submit
 {
-	margin-top: 15px;
+	margin-top: 5px;
 
 }
 
+#message_for_wrong_name
+{
+	color: #E94D2B;
+}
 
-	
+#message_for_wrong_email
+{
+	color: #E94D2B;
+}
+
+#message_for_wrong_password
+{
+	color: #E94D2B;
+}	

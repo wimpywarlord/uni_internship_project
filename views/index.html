@@ -15,7 +15,13 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<!-- JAVASCRIPT -->
-		<link rel="stylesheet" type="text/css" href="D:\MY PROJECTS\WEB\uni_internship_project\public\js">
+		<script type="text/javascript" src="D:\MY PROJECTS\WEB\uni_internship_project\public\js\index_js.js"></script>
+
+	<!-- JQUERY -->
+		<script
+		  src="https://code.jquery.com/jquery-3.4.1.min.js"
+		  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		  crossorigin="anonymous"></script>
 </head>
 <body>
 		<div class="parent">
@@ -29,16 +35,19 @@
 				<form>
 					 <!-- INPUT FIELD FIRS NAME  -->
 					 <label for="exampleInputfirstname">First Name</label>
-					 <input type="text" class="form-control" placeholder="">
+					 <input id="value_of_input_first_name" type="text" class="form-control" placeholder="">
+					 <small id="message_for_wrong_name"></small><br>
 					 <!-- INPUT FIELD EMAIL  -->
 					 <label for="exampleInputEmail1">Email address</label>
-					 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					 <input id="value_of_input_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					 <small id="message_for_wrong_email"></small><br>
 					 <!-- INPUT FIELD PASSWORD -->
 					 <label for="exampleInputPassword1">Password</label>
-					 <input type="password" class="form-control" id="exampleInputPassword1">
+					 <input id="value_of_input_password" type="password" class="form-control" id="exampleInputPassword1">
+					 <small id="message_for_wrong_password"></small><br>
 					 <!-- SUBMIT BUTTON -->
 					 <div id="submit-button-box">
-					 	<button id="form-btn-submit" type="submit" class="btn btn-primary">Submit</button>
+					 	<button id="form-btn-submit" type="button" class="btn btn-primary" onclick="form_validation()">SignUp</button>
 					 </div>
 				</form>
 			 </div>
