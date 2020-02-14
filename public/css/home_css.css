@@ -1,5 +1,76 @@
 #home_page_nav_bar
 {
 	background-color: #FFDE72;
-	min-height: 5vh;
+	min-height: 4vh;
+	padding: 4px;
+}
+#box_for_search_bar
+{
+	min-height: 35vh;
+	/*border: 2px solid red;*/
+	/*background-image: url('D:/MY PROJECTS/WEB/uni_internship_project/public/photos/g.jpg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+    background-size: 100% 100%;
+	*/
+	background-color: #FCF3CF;
+}
+#search_box_form
+{
+	position: relative;
+    display: block;
+    margin : auto;
+}
+#search_box
+{
+	min-width: 450px;
+	border-radius: 33px;
+	padding: 11px;
+}
+#box_for_sort_options
+{
+	background-color: #E6E6E6;
+}
+.col-lg-1
+{
+	padding: 8px;
+	text-align: center;
+}
+#decorations_of_by_name_sort
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+}
+#decorations_of_by_year_sort
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+}
+#decorations_of_by_rating_sort
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+}
+#decorations_of_by_sort_sort
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	margin-left: 25px;
 }
