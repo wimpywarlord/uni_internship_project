@@ -12,6 +12,7 @@ grid-row-gap: 0px;
 .div1 { 
 	grid-area: 1 / 1 / 2 / 11; 
 	background-color:#FFDE72; 
+	max-height: 5vh;
 }
 .div2 {
 
