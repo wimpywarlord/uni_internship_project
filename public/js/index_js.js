@@ -40,7 +40,21 @@ function form_validation()
 		indicator=1;
 	}
 
+
 	//VALIDATING PASSWORD
+
+	if(!/(.*[A-Z].*)(.*\d.*)/.test($("#value_of_input_password").val()))
+	{
+		console.log("DOES NOT HAVE A INT OR UPPER CASE");
+		$("#message_for_wrong_password").text("Password must contain a UpperCase letter and an integer.");
+		indicator =0;
+	}
+	else
+	{
+		indicator=1;
+		$("#message_for_wrong_password").text("");
+	}
+
 	if($("#value_of_input_password").val().length<8 )
 	{
 		console.log("SMALL PASSWORD");
@@ -53,15 +67,9 @@ function form_validation()
 		$("#message_for_wrong_password").text("");
 		indicator = 1;
 	}
-	if(!/(.*[A-Z].*)(.*\d.*)/.test($("#value_of_input_password").val()))
-		{
-			console.log("DOES NOT HAVE A INT OR UPPER CASE");
-			$("#message_for_wrong_password").text("Password must contain a UpperCase letter and an integer.");
-			indicator =0;
-		}
-	else
+
+	if(indicator==1)
 	{
-		indicator=1;
-		$("#message_for_wrong_password").text("");
+		$("#id_for_the_form").submit();
 	}
 }

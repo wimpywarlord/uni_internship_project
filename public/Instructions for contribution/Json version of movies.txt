@@ -1,5 +1,4 @@
-var list_of_all_movies = 
-{
+﻿{
     "Sheet1": [
         {
             "S.No.": "73",
@@ -702,41 +701,4 @@ var list_of_all_movies =
             "isFeatured": "FALSE"
         }
     ]
-};
-
-console.log(list_of_all_movies.Sheet1[0]);
-
-var express = require("express");
-var bodyParser = require("body-parser");
-
-
-var app = express();
-app.use(bodyParser.urlencoded({extended : true}));
-
-app.use(express.static(__dirname + '/public'));
-
-app.get("/",function(req,res){
-	res.render("index.ejs")
-});
-
-app.get("/home",function(req,res){
-	res.render("home.ejs");
-});
-
-app.post("/home",function(req,res){
-
-	console.log(req.body.email);
-	res.redirect("/home");
-});
-
-app.get("*",function(req,res)
-{
-	res.render("error_page.ejs");
-});
-
-app.listen( process.env.PORT || 8000 , function(){
-	console.log("SERVER 8000 HAS STARTED");
-});
-
-
-
+}
