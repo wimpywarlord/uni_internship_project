@@ -1,0 +1,24 @@
+{
+  "name": "uni_internship_project",
+  "version": "1.0.0",
+  "description": "A small movie rating project for uni_internship",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wimpywarlord/uni_internship_project.git"
+  },
+  "author": "Kshitij Dhyani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wimpywarlord/uni_internship_project/issues"
+  },
+  "homepage": "https://github.com/wimpywarlord/uni_internship_project#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
