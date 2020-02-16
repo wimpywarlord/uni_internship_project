@@ -5,7 +5,10 @@ function form_validation()
 	console.log($("#value_of_input_email").val());	
 	console.log($("#value_of_input_password").val());
 
-	var indicator = 0; 
+	var indicator_1 = 0; 
+	var indicator_2 = 0; 
+	var indicator_3 = 0; 
+	var indicator_4 = 0; 
 
 	//VALIDATING NAME
 	// ^: Assert position at the beginning of the string
@@ -19,12 +22,12 @@ function form_validation()
 	{
 		console.log("ALL ARE NOT CHARACTERS.");
 		$("#message_for_wrong_name").text("Must only contain alphabets.");
-		indicator=0;
+		indicator_1=0;
 	}
 	else
 	{
 		$("#message_for_wrong_name").text("");
-		indicator=1;
+		indicator_1=1;
 	}
 
 	//VALIDATING EMAIL
@@ -32,12 +35,12 @@ function form_validation()
 	{
 		console.log("NOT A VALID EMAIL");
 		$("#message_for_wrong_email").text("Enter a valid email.");
-		indicator =0 ;
+		indicator_2=0 ;
 	}
 	else
 	{
 		$("#message_for_wrong_email").text("");
-		indicator=1;
+		indicator_2=1;
 	}
 
 
@@ -47,11 +50,11 @@ function form_validation()
 	{
 		console.log("DOES NOT HAVE A INT OR UPPER CASE");
 		$("#message_for_wrong_password").text("Password must contain a UpperCase letter and an integer.");
-		indicator =0;
+		indicator_3 =0;
 	}
 	else
 	{
-		indicator=1;
+		indicator_3 =1;
 		$("#message_for_wrong_password").text("");
 	}
 
@@ -59,16 +62,16 @@ function form_validation()
 	{
 		console.log("SMALL PASSWORD");
 		$("#message_for_wrong_password").text("Password must be 8 character long.");
-		indicator =0 ;
+		indicator_4 =0 ;
 		
 	}
 	else
 	{
 		$("#message_for_wrong_password").text("");
-		indicator = 1;
+		indicator_4 = 1;
 	}
 
-	if(indicator==1)
+	if(indicator==1 && indicator_2==1 && indicator_3==1 & indicator_4==1)
 	{
 		$("#id_for_the_form").submit();
 	}

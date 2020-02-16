@@ -74,3 +74,33 @@
 	padding-bottom: 4px;
 	margin-left: 25px;
 }
+.vertical_1
+{
+	padding: 30px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 /*border: 5px solid black;*/
+}
+.vertical_2
+{
+	padding: 30px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 /*border: 5px solid black;*/
+}
+.vertical_3
+{
+
+	 padding: 30px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 /*border: 5px solid black;*/
+}
+
+#box_for_all_the_cards
+{
+	padding-top: 50px;
+}

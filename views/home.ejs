@@ -14,7 +14,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<!-- JAVASCRIPT -->
-		<script type="text/javascript" src="\js\index_js.js"></script>
+		<script type="text/javascript" src="/js/home_js.js"></script>
+
 
 	<!-- JQUERY -->
 		<script
@@ -36,53 +37,67 @@
 		<div class="col-lg-1"></div>
 		<div class="col-lg-1"></div>
 		<div class="col-lg-1"></div>
-		<div class="col-lg-1"><span id="decorations_of_by_sort_sort">Sort</span></div>
-		<div class="col-lg-1"><span id="decorations_of_by_name_sort">By name</span></div>
-		<div class="col-lg-1"><span id="decorations_of_by_year_sort">By year</span></div>
-		<div class="col-lg-1"><span id="decorations_of_by_rating_sort">By rating</span></div>
+		<div class="col-lg-1"><span  id="decorations_of_by_sort_sort">Sort</span></div>
+		<div class="col-lg-1">
+			<form id="post_selection_for_home_sort_by_name" action="/home_sort_by_name" method="POST">
+				<span onclick="sort_by_name()" id="decorations_of_by_name_sort">By name</span>
+			</form>
+		</div>
+		<div class="col-lg-1">
+			<form id="post_selection_for_home_sort_by_year" action="/home_sort_by_year" method="POST">
+				<span onclick="sort_by_name()" id="decorations_of_by_year_sort">By year</span>
+			</form>
+		</div>
+		<div  class="col-lg-1">
+			<form id="post_selection_for_home_sort_by_rating" action="/home_sort_by_rating" method="POST">
+				<span onclick="sort_by_name()" id="decorations_of_by_rating_sort">By rating</span>
+			</form>
+		</div>
 		<div class="col-lg-1"></div>
 		<div class="col-lg-1"></div>
 		<div class="col-lg-1"></div>
 		<div class="col-lg-1"></div>
 	</div>
-	<div id="box_for_all the cards">
+	<div id="box_for_all_the_cards">
 
-		<% for(var i =0 ; i < list_of_movies.Sheet1.length ; i++ ) { %>
+		<% for(var i = 0 ; i < list_of_movies.Sheet1.length  ; i++ ) { %>
 
-			<div class="row" >
-				<div class="col-lg-4">
-					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title">list_of_movies.length</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
-					  </div>
+			<div class="row all_rows_of_cards" >
+				<div class="col-lg-4 ">
+					<div class="vertical_1">
+						<div class="card" style="width: 18rem;">
+						  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
+						  <div class="card-body">
+						    <h5 class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
+						    <p class="card-text"></p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						  </div>
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-4">
-					
-					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title">list_of_movies.length</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
-					  </div>
+				<div class="col-lg-4 ">
+					<div class="vertical_2">
+						<div class="card" style="width: 18rem;">
+						  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
+						  <div class="card-body">
+						    <h5 class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
+						    <p class="card-text"></p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						  </div>
+						</div>
 					</div>
-
 				</div>
-				<div class="col-lg-4">
-					
-					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title">list_of_movies.length</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
-					  </div>
+				<div class="col-lg-4 ">
+					<div class="vertical_3">
+						<div class="card" style="width: 18rem;">
+						  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
+						  <div class="card-body">
+						    <h5 class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
+						    <p class="card-text">.</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						  </div>
+						</div>
 					</div>
-
 				</div>
 			</div>
 

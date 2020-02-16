@@ -704,6 +704,8 @@ var list_of_all_movies =
     ]
 };
 
+var list_of_all_the_thumbnails = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w"];
+
 console.log(list_of_all_movies.Sheet1.length);
 
 var express = require("express");
@@ -719,16 +721,29 @@ app.get("/",function(req,res){
 	res.render("index.ejs")
 });
 
-app.get("/home",function(req,res){
-	res.render("home.ejs",{
-        "list_of_movies"  : list_of_all_movies,
-    });
-});
-
 app.post("/home",function(req,res){
 
 	console.log(req.body.email);
-	res.redirect("/home");
+	res.render("home.ejs",{
+        "list_of_movies"  : list_of_all_movies,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    });
+
+});
+
+app.post("/home_sort_by_name",function(req,res){
+    res.render("home.ejs",{});
+    console.log("THIS IS SORT BY NAME");
+});
+
+app.post("/home_sort_by_year",function(req,res){
+    res.render("home.ejs",{});
+    console.log("THIS IS SORT BY NAME");
+});
+
+app.post("/home_sort_by_rating",function(req,res){
+    res.render("home.ejs",{}); 
+    console.log("THIS IS SORT BY RATING");
 });
 
 app.get("*",function(req,res)
