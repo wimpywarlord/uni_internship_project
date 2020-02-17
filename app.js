@@ -720,6 +720,12 @@ app.get("/",function(req,res){
 	res.render("index.ejs")
 });
 
+app.get("/info_page",function(req,res){
+    res.render("info_page.ejs",{
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    });
+});
+
 app.post("/home",function(req,res){
 
 
