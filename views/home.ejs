@@ -45,12 +45,12 @@
 		</div>
 		<div class="col-lg-1">
 			<form id="post_selection_for_home_sort_by_year" action="/home_sort_by_year" method="POST">
-				<span onclick="sort_by_name()" id="decorations_of_by_year_sort">By year</span>
+				<span onclick="sort_by_year()" id="decorations_of_by_year_sort">By year</span>
 			</form>
 		</div>
 		<div  class="col-lg-1">
 			<form id="post_selection_for_home_sort_by_rating" action="/home_sort_by_rating" method="POST">
-				<span onclick="sort_by_name()" id="decorations_of_by_rating_sort">By rating</span>
+				<span onclick="sort_by_rating()" id="decorations_of_by_rating_sort">By rating</span>
 			</form>
 		</div>
 		<div class="col-lg-1"></div>
@@ -58,6 +58,10 @@
 		<div class="col-lg-1"></div>
 		<div class="col-lg-1"></div>
 	</div>
+	<!-- 	<%for(var i = 0 ; i< list_of_movies.Sheet1.length ;i++ ) {%>
+			<p><%=list_of_movies.Sheet1[i].Movie_name%></p>
+		<%}%> -->
+
 	<div id="box_for_all_the_cards">
 
 		<% for(var i = 0 ; i < list_of_movies.Sheet1.length  ; i++ ) { %>

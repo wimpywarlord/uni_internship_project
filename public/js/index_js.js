@@ -71,7 +71,7 @@ function form_validation()
 		indicator_4 = 1;
 	}
 
-	if(indicator==1 && indicator_2==1 && indicator_3==1 & indicator_4==1)
+	if(indicator_1==1 && indicator_2==1 && indicator_3==1 & indicator_4==1)
 	{
 		$("#id_for_the_form").submit();
 	}
