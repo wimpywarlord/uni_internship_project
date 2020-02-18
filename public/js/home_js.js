@@ -14,3 +14,8 @@ function sort_by_rating()
 	$("#post_selection_for_home_sort_by_rating").submit();
 	console.log("THIS IS SORT BY YEAR FUCNTION BEING EXCECUTED");
 }
+function logout()
+{
+	$("#logout_form").submit();
+	console.log("THIS IS THE LOGOUT FUNCTION BEING EXECUTED.");
+}

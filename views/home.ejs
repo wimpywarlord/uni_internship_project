@@ -25,7 +25,9 @@
 </head>
 <body>
 	<div id="home_page_nav_bar" class="row">
-		<span id="decorations_of_by_sort_sort">Logout</span>
+		<form id="logout_form" action="/logout" method="POST">
+			<span onclick="logout()" id="decorations_of_by_sort_sort">Logout</span>
+		</form>	
 	</div>
 	<div id="box_for_search_bar" class="row">
 		<form id="search_box_form">

@@ -726,10 +726,16 @@ app.get("/info_page",function(req,res){
     });
 });
 
+app.post("/logout",function(req,res)
+    {
+        res.redirect("/");
+    });
+
+
 app.post("/home",function(req,res){
 
 
-	console.log(req.body.email);
+	// console.log(req.body.email);
 	res.render("home.ejs",{
         "list_of_movies"  : list_of_all_movies,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -748,7 +754,7 @@ app.post("/home_sort_by_name",function(req,res){
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
     });
 
-    console.log(list_of_all_movies_sorted_by_movie_name);
+    // console.log(list_of_all_movies_sorted_by_movie_name);
     console.log("THIS IS SORT BY NAME");
 });
 
@@ -759,7 +765,7 @@ app.post("/home_sort_by_year",function(req,res){
     };
     // console.log(list_of_all_movies_sorted_by_year);
 
-    console.log(list_of_all_movies.Sheet1.length);
+    // console.log(list_of_all_movies.Sheet1.length);
 
     res.render("home.ejs",{
         "list_of_movies"  : list_of_all_movies_sorted_by_year,
