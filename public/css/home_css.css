@@ -398,6 +398,12 @@ EFFECT FADING OUT FOR SIBLINGS MENU OPTIONS
     box-shadow:0 0 10px rgba(0,0,0,0.63);
 }
 
+.card-body{
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+
 #info_symbol_form{
 	padding-top: 10px;
 }
