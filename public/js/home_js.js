@@ -27,8 +27,20 @@ function logout()
 	$("#logout_form").submit();
 	console.log("THIS IS THE LOGOUT FUNCTION BEING EXECUTED.");
 }
-function info_symbol()
+function info_symbol_1()
 {
-	$("#info_symbol_form").submit();
-	console.log("INFO BUTTON CLICKED");
+	$("#info_symbol_form_1").submit();
+	console.log("first info button was clicked in the row");
+}
+
+function info_symbol_2()
+{
+	$("#info_symbol_form_2").submit();
+	console.log("second info button was clicked in the row");
+}
+
+function info_symbol_3()
+{
+	$("#info_symbol_form_3").submit();
+	console.log("third info button was cliked in the row");
 }

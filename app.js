@@ -835,7 +835,7 @@ app.post("/home_sort_by_rating",function(req,res){
     console.log("THIS IS SORT BY RATING");
 });
 
-app.get("/info_page/:Movie_name/:Star_rating/:Year",function(req,res){
+app.post("/info_page/:Movie_name/:Star_rating/:Year",function(req,res){
 
     // res.send(req.params);
     var details_of_the_movie = req.params;
