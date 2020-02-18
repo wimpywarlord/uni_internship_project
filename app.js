@@ -21,20 +21,6 @@ var list_of_featured_movies = {
             "isFeatured": "TRUE"
         },
         {
-            "Serial": "52",
-            "Movie_name": "Star Wars: The Force Awakens",
-            "Star_rating": "1",
-            "Year": "2015",
-            "isFeatured": "TRUE"
-        },
-        {
-            "Serial": "29",
-            "Movie_name": "Up",
-            "Star_rating": "3",
-            "Year": "2009",
-            "isFeatured": "TRUE"
-        },
-                {
             "Serial": "70",
             "Movie_name": "Captain America: Civil War",
             "Star_rating": "4",
@@ -835,7 +821,7 @@ app.post("/home_sort_by_rating",function(req,res){
     console.log("THIS IS SORT BY RATING");
 });
 
-app.post("/info_page/:Movie_name/:Star_rating/:Year",function(req,res){
+app.get("/info_page/:Movie_name/:Star_rating/:Year",function(req,res){
 
     // res.send(req.params);
     var details_of_the_movie = req.params;

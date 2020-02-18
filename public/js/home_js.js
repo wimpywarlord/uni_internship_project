@@ -27,20 +27,23 @@ function logout()
 	$("#logout_form").submit();
 	console.log("THIS IS THE LOGOUT FUNCTION BEING EXECUTED.");
 }
-function info_symbol_1()
+function info_symbol_1(i)
 {
-	$("#info_symbol_form_1").submit();
-	console.log("first info button was clicked in the row");
+	console.log($("#info_symbol_form_"+ i.toString()).attr('action'));
+	$("#info_symbol_form_" + i.toString()).submit();
+	console.log("info button was clicked in the row");
 }
 
-function info_symbol_2()
+function info_symbol_2(i)
 {
-	$("#info_symbol_form_2").submit();
-	console.log("second info button was clicked in the row");
+	console.log($("#info_symbol_form_"+ (i+1).toString()).attr('action'));
+	$("#info_symbol_form_" + (i+1).toString()).submit();
+	console.log("info button was clicked in the row");
 }
 
-function info_symbol_3()
+function info_symbol_3(i)
 {
-	$("#info_symbol_form_3").submit();
-	console.log("third info button was cliked in the row");
+	console.log($("#info_symbol_form_"+ (i+2).toString()).attr('action'));
+	$("#info_symbol_form_" + (i+2).toString()).submit();
+	console.log("info button was clicked in the row");
 }

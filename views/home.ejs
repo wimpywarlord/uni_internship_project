@@ -98,8 +98,8 @@
 						     	
 						     <%}%>
 						     <br>
-						     <form id="info_symbol_form_1" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="POST">
-							     <button onclick="info_symbol_1()" type="button" class="btn btn-dark">info</button>
+						     <form id="info_symbol_form_<%=i%>" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="GET">
+							     <button onclick="info_symbol_1(<%=i%>)" type="button" class="btn btn-dark">info</button>
 							  </form>
 						  </div>
 						</div>
@@ -113,14 +113,15 @@
 						    <h5 style="margin-bottom: 0px;" class="card-title"><%=list_of_movies.Sheet1[i+1].Movie_name%></h5>
 						     <%for(var j =0 ; j< list_of_movies.Sheet1[i+1].Star_rating ; j++ )
 						     {
+
 						     	%>
 
 						     	<i class="fas fa-star"></i>
 
 						     <%}%>
 						     <br>
-						     <form id="info_symbol_form_2" action="/info_page/<%=list_of_movies.Sheet1[i+1].Movie_name%>/<%=list_of_movies.Sheet1[i+1].Star_rating%>/<%=list_of_movies.Sheet1[i+1].Year%>" method="POST">
-							     <button onclick="info_symbol_2()" type="button" class="btn btn-dark">info</button>
+						     <form id="info_symbol_form_<%=i+1%>" action="/info_page/<%=list_of_movies.Sheet1[i+1].Movie_name%>/<%=list_of_movies.Sheet1[i+1].Star_rating%>/<%=list_of_movies.Sheet1[i+1].Year%>" method="GET">
+							     <button onclick="info_symbol_2(<%=i%>)" type="button" class="btn btn-dark">info</button>
 							  </form>
 						  </div>
 						</div>
@@ -140,8 +141,8 @@
 						     	
 						     <%}%>
 						     <br>
-						    <form id="info_symbol_form_3" action="/info_page/<%=list_of_movies.Sheet1[i+2].Movie_name%>/<%=list_of_movies.Sheet1[i+2].Star_rating%>/<%=list_of_movies.Sheet1[i+2].Year%>" method="POST">
-							     <button onclick="info_symbol_3()" type="button" class="btn btn-dark"><%=list_of_movies.Sheet1[i+2].Movie_name%></button>
+						    <form id="info_symbol_form_<%=i+2%>" action="/info_page/<%=list_of_movies.Sheet1[i+2].Movie_name%>/<%=list_of_movies.Sheet1[i+2].Star_rating%>/<%=list_of_movies.Sheet1[i+2].Year%>" method="GET">
+							     <button onclick="info_symbol_3(<%=i%>)" type="button" class="btn btn-dark">info</button>
 							  </form>
 						  </div>
 						</div>

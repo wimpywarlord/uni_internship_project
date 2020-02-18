@@ -2,9 +2,6 @@
 <html>
 <head>
 	<title>Kshitij Dhyani</title>
-	<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="\css\info_page_css.css">
-
 
 	<!-- CSS RESETTER -->
 
@@ -27,13 +24,25 @@
 			  interval: 1000
 			})
 		</script>
+    <script type="text/javascript" src="/js/info_page_js.js"></script>
+ 
 
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
 
 	<!-- JQUERY -->
 		<script
 		  src="https://code.jquery.com/jquery-3.4.1.min.js"
 		  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		  crossorigin="anonymous"></script>
+
+  <!-- FONT AWSOME -->
+    <script src="https://use.fontawesome.com/47a92560c0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css">
+
+  <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="\css\info_page_css.css">
 
 </head>
 <body>
@@ -50,30 +59,36 @@
       <div class="carousel-item active">
         <img src="/photos/t.jpg" class="d-block w-100" alt="">
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h5>Harry Potter and the Chamber of Secrets</h5>
+          <p>Fall into the world of the wizards.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="/photos/o.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5>Star Wars: The Force Awakens</h5>
+          <p>A Space Odyssey </p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="/photos/p.jpg" class="d-block w-100" alt="FEATURED MOVIE">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <h5>Up</h5>
+          <p>Old man and his persuit of happiness.</p>
         </div>
       </div>
-      
       <div class="carousel-item">
-        <img src="/photos/d.jpg" class="d-block w-100" alt="FEATURED MOVIE">
+        <img src="/photos/l.jpg" class="d-block w-100" alt="FEATURED MOVIE">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <h5>Captain America: Civil War</h5>
+          <p>Be the hero you want to see.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/photos/a.jpg" class="d-block w-100" alt="FEATURED MOVIE">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Pirates of the Caribbean: At World's End</h5>
+          <p>Live the thug life.</p>
         </div>
       </div>
 
@@ -89,7 +104,22 @@
 </div>
 		  
       <div id="box_below_the_carousel">
-        <%=details_of_the_movie.Movie_name%>
+          <div id="my_card">
+            <br>
+            <p id="heading_of_the_card"><%=details_of_the_movie.Movie_name%></p>
+            <%for(var j =0 ; j< details_of_the_movie.Star_rating ; j++ )
+                 {
+                  %>
+                  
+                  <i class="fas fa-star"></i>
+                  
+                 <%}%>
+            <p>
+            <br>
+              An experience that will change your life and melt your soul.
+            </p>
+            <p id="year_of_the_movie"><%=details_of_the_movie.Year%></p>
+          </div>
       </div>
 </body>
 </html>
