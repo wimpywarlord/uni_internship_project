@@ -839,6 +839,7 @@ app.get("/info_page/:Movie_name/:Star_rating/:Year",function(req,res){
 
     // res.send(req.params);
     var details_of_the_movie = req.params;
+    console.log(details_of_the_movie);
     // console.log(details_of_the_movie);
     res.render("info_page.ejs",{
         "list_of_featured_movies" : list_of_featured_movies, 
