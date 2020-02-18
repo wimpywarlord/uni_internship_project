@@ -3,8 +3,21 @@
     height: 35vh;
 } 
 .carousel-item img{
-    height: 350vh;
+    height: 35vh;
     width:auto; 
       height:100%; 
       object-fit:cover; 
+}
+
+@media only screen and (min-width : 1200px) {
+  .carousel-caption
+  {
+    top: 46%;
+  }
+}
+
+#box_below_the_carousel
+{
+	background-color: #212F3D;
+	min-height: 65vh;
 }

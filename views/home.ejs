@@ -22,11 +22,17 @@
 		  src="https://code.jquery.com/jquery-3.4.1.min.js"
 		  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		  crossorigin="anonymous"></script>
+
+	<!-- FONT AWSOME -->
+		<script src="https://use.fontawesome.com/47a92560c0.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css">
+
+
 </head>
 <body>
 	<div id="home_page_nav_bar" class="row">
 		<form id="logout_form" action="/logout" method="POST">
-			<span onclick="logout()" id="decorations_of_by_sort_sort">Logout</span>
+			<span onclick="logout()" id="decorations_of_logout">Logout</span>
 		</form>	
 	</div>
 	<div id="box_for_search_bar" class="row">
@@ -39,7 +45,11 @@
 		<div class="col-lg-1"></div>
 		<div class="col-lg-1"></div>
 		<div class="col-lg-1"></div>
-		<div class="col-lg-1"><span  id="decorations_of_by_sort_sort">Sort</span></div>
+		<div class="col-lg-1">
+			<form id="post_selection_for_home_sort_by_random" action="/home" method="POST">
+				<span onclick="sort_by_random()" id="decorations_of_by_sort_sort">Random</span>
+			</form>
+		</div>
 		<div class="col-lg-1">
 			<form id="post_selection_for_home_sort_by_name" action="/home_sort_by_name" method="POST">
 				<span onclick="sort_by_name()" id="decorations_of_by_name_sort">By name</span>
@@ -75,8 +85,17 @@
 						  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
 						  <div class="card-body">
 						    <h5 class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
-						    <p class="card-text"></p>
-						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						      <%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
+						     {
+						     	%>
+						     	
+						     	<i class="fas fa-star"></i>
+						     	
+						     <%}%>
+						     <br>
+						     <form id="info_symbol_form" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="GET">
+							     <button onclick="info_symbol()" type="button" class="btn btn-dark">info</button>
+							  </form>
 						  </div>
 						</div>
 					</div>
@@ -87,8 +106,17 @@
 						  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
 						  <div class="card-body">
 						    <h5 class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
-						    <p class="card-text"></p>
-						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						     <%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
+						     {
+						     	%>
+
+						     	<i class="fas fa-star"></i>
+
+						     <%}%>
+						     <br>
+						     <form id="info_symbol_form" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="GET">
+							     <button onclick="info_symbol()" type="button" class="btn btn-dark">info</button>
+							  </form>
 						  </div>
 						</div>
 					</div>
@@ -99,8 +127,17 @@
 						  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
 						  <div class="card-body">
 						    <h5 class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
-						    <p class="card-text">.</p>
-						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						     <%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
+						     {
+						     	%>
+						     	
+						     	<i class="fas fa-star"></i>
+						     	
+						     <%}%>
+						     <br>
+						    <form id="info_symbol_form" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="GET">
+							     <button onclick="info_symbol()" type="button" class="btn btn-dark">info</button>
+							  </form>
 						  </div>
 						</div>
 					</div>
