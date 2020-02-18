@@ -1,710 +1,764 @@
+var list_of_featured_movies = {
+    "Sheet1" : [  {
+            "Serial": "14",
+            "Movie_name": "Harry Potter and the Chamber of Secrets",
+            "Star_rating": "3",
+            "Year": "2002",
+            "isFeatured": "TRUE"
+        },
+        {
+            "Serial": "52",
+            "Movie_name": "Star Wars: The Force Awakens",
+            "Star_rating": "1",
+            "Year": "2015",
+            "isFeatured": "TRUE"
+        },
+        {
+            "Serial": "29",
+            "Movie_name": "Up",
+            "Star_rating": "3",
+            "Year": "2009",
+            "isFeatured": "TRUE"
+        },
+        {
+            "Serial": "52",
+            "Movie_name": "Star Wars: The Force Awakens",
+            "Star_rating": "1",
+            "Year": "2015",
+            "isFeatured": "TRUE"
+        },
+        {
+            "Serial": "29",
+            "Movie_name": "Up",
+            "Star_rating": "3",
+            "Year": "2009",
+            "isFeatured": "TRUE"
+        },
+                {
+            "Serial": "70",
+            "Movie_name": "Captain America: Civil War",
+            "Star_rating": "4",
+            "Year": "2016",
+            "isFeatured": "TRUE"
+        },
+        {
+            "Serial": "6",
+            "Movie_name": "Pirates of the Caribbean: At World's End",
+            "Star_rating": "2",
+            "Year": "2007",
+            "isFeatured": "TRUE"
+        },
+        ]
+}
+
 var list_of_all_movies = 
 {
     "Sheet1": [
         {
-            "S.No.": "73",
-            "Movie name": "Captain Marvel",
-            "Star rating": "2",
+            "Serial": "73",
+            "Movie_name": "Captain Marvel",
+            "Star_rating": "2",
             "Year": "2019",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "64",
-            "Movie name": "Frozen",
-            "Star rating": "2",
+            "Serial": "64",
+            "Movie_name": "Frozen",
+            "Star_rating": "2",
             "Year": "2013",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "14",
-            "Movie name": "Harry Potter and the Chamber of Secrets",
-            "Star rating": "3",
+            "Serial": "14",
+            "Movie_name": "Harry Potter and the Chamber of Secrets",
+            "Star_rating": "3",
             "Year": "2002",
             "isFeatured": "TRUE"
         },
         {
-            "S.No.": "93",
-            "Movie name": "Harry Potter and the Deathly Hallows - Part 1",
-            "Star rating": "4",
+            "Serial": "93",
+            "Movie_name": "Harry Potter and the Deathly Hallows - Part 1",
+            "Star_rating": "4",
             "Year": "2010",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "11",
-            "Movie name": "Harry Potter and the Goblet of Fire",
-            "Star rating": "4",
+            "Serial": "11",
+            "Movie_name": "Harry Potter and the Goblet of Fire",
+            "Star_rating": "4",
             "Year": "2005",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "8",
-            "Movie name": "Harry Potter and the Half-Blood Prince",
-            "Star rating": "5",
+            "Serial": "8",
+            "Movie_name": "Harry Potter and the Half-Blood Prince",
+            "Star_rating": "5",
             "Year": "2009",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "31",
-            "Movie name": "Ice Age: The Meltdown",
-            "Star rating": "5",
+            "Serial": "31",
+            "Movie_name": "Ice Age: The Meltdown",
+            "Star_rating": "5",
             "Year": "2006",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "66",
-            "Movie name": "Incredibles 2",
-            "Star rating": "5",
+            "Serial": "66",
+            "Movie_name": "Incredibles 2",
+            "Star_rating": "5",
             "Year": "2018",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "54",
-            "Movie name": "Jurassic World",
-            "Star rating": "5",
+            "Serial": "54",
+            "Movie_name": "Jurassic World",
+            "Star_rating": "5",
             "Year": "2015",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "47",
-            "Movie name": "King Kong",
-            "Star rating": "5",
+            "Serial": "47",
+            "Movie_name": "King Kong",
+            "Star_rating": "5",
             "Year": "2005",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "40",
-            "Movie name": "Madagascar: Escape 2 Africa",
-            "Star rating": "3",
+            "Serial": "40",
+            "Movie_name": "Madagascar: Escape 2 Africa",
+            "Star_rating": "3",
             "Year": "2008",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "46",
-            "Movie name": "Night at the Museum",
-            "Star rating": "3",
+            "Serial": "46",
+            "Movie_name": "Night at the Museum",
+            "Star_rating": "3",
             "Year": "2006",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "43",
-            "Movie name": "Quantum of Solace",
-            "Star rating": "1",
+            "Serial": "43",
+            "Movie_name": "Quantum of Solace",
+            "Star_rating": "1",
             "Year": "2008",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "81",
-            "Movie name": "Rogue One: A Star Wars Story",
-            "Star rating": "5",
+            "Serial": "81",
+            "Movie_name": "Rogue One: A Star Wars Story",
+            "Star_rating": "5",
             "Year": "2016",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "89",
-            "Movie name": "Star Wars: The Rise of Skywalker",
-            "Star rating": "3",
+            "Serial": "89",
+            "Movie_name": "Star Wars: The Rise of Skywalker",
+            "Star_rating": "3",
             "Year": "2019",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "77",
-            "Movie name": "The Dark Knight Rises",
-            "Star rating": "5",
+            "Serial": "77",
+            "Movie_name": "The Dark Knight Rises",
+            "Star_rating": "5",
             "Year": "2012",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "67",
-            "Movie name": "The Fate of the Furious",
-            "Star rating": "4",
+            "Serial": "67",
+            "Movie_name": "The Fate of the Furious",
+            "Star_rating": "4",
             "Year": "2017",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "95",
-            "Movie name": "The Hobbit: The Battle of the Five Armies",
-            "Star rating": "4",
+            "Serial": "95",
+            "Movie_name": "The Hobbit: The Battle of the Five Armies",
+            "Star_rating": "4",
             "Year": "2014",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "35",
-            "Movie name": "The Incredibles",
-            "Star rating": "4",
+            "Serial": "35",
+            "Movie_name": "The Incredibles",
+            "Star_rating": "4",
             "Year": "2004",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "38",
-            "Movie name": "The Passion of the Christ",
-            "Star rating": "4",
+            "Serial": "38",
+            "Movie_name": "The Passion of the Christ",
+            "Star_rating": "4",
             "Year": "2004",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "100",
-            "Movie name": "The Secret Life of Pets",
-            "Star rating": "3",
+            "Serial": "100",
+            "Movie_name": "The Secret Life of Pets",
+            "Star_rating": "3",
             "Year": "2016",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "87",
-            "Movie name": "Zootopia",
-            "Star rating": "3",
+            "Serial": "87",
+            "Movie_name": "Zootopia",
+            "Star_rating": "3",
             "Year": "2016",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "86",
-            "Movie name": "Alice in Wonderland",
-            "Star rating": "1",
+            "Serial": "86",
+            "Movie_name": "Alice in Wonderland",
+            "Star_rating": "1",
             "Year": "2010",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "53",
-            "Movie name": "Avengers: Infinity War",
-            "Star rating": "5",
+            "Serial": "53",
+            "Movie_name": "Avengers: Infinity War",
+            "Star_rating": "5",
             "Year": "2018",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "84",
-            "Movie name": "Despicable Me 3",
-            "Star rating": "1",
+            "Serial": "84",
+            "Movie_name": "Despicable Me 3",
+            "Star_rating": "1",
             "Year": "2017",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "16",
-            "Movie name": "Finding Nemo",
-            "Star rating": "4",
+            "Serial": "16",
+            "Movie_name": "Finding Nemo",
+            "Star_rating": "4",
             "Year": "2003",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "59",
-            "Movie name": "Frozen II",
-            "Star rating": "4",
+            "Serial": "59",
+            "Movie_name": "Frozen II",
+            "Star_rating": "4",
             "Year": "2019",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "57",
-            "Movie name": "Furious 7",
-            "Star rating": "3",
+            "Serial": "57",
+            "Movie_name": "Furious 7",
+            "Star_rating": "3",
             "Year": "2015",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "68",
-            "Movie name": "Iron Man 3",
-            "Star rating": "2",
+            "Serial": "68",
+            "Movie_name": "Iron Man 3",
+            "Star_rating": "2",
             "Year": "2013",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "79",
-            "Movie name": "Joker",
-            "Star rating": "2",
+            "Serial": "79",
+            "Movie_name": "Joker",
+            "Star_rating": "2",
             "Year": "2019",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "50",
-            "Movie name": "Madagascar",
-            "Star rating": "5",
+            "Serial": "50",
+            "Movie_name": "Madagascar",
+            "Star_rating": "5",
             "Year": "2005",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "83",
-            "Movie name": "Pirates of the Caribbean: On Stranger Tides",
-            "Star rating": "4",
+            "Serial": "83",
+            "Movie_name": "Pirates of the Caribbean: On Stranger Tides",
+            "Star_rating": "4",
             "Year": "2011",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "32",
-            "Movie name": "Pirates of the Caribbean: The Curse of the Black Pearl",
-            "Star rating": "5",
+            "Serial": "32",
+            "Movie_name": "Pirates of the Caribbean: The Curse of the Black Pearl",
+            "Star_rating": "5",
             "Year": "2003",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "98",
-            "Movie name": "Spider-Man: Homecoming",
-            "Star rating": "4",
+            "Serial": "98",
+            "Movie_name": "Spider-Man: Homecoming",
+            "Star_rating": "4",
             "Year": "2017",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "52",
-            "Movie name": "Star Wars: The Force Awakens",
-            "Star rating": "1",
+            "Serial": "52",
+            "Movie_name": "Star Wars: The Force Awakens",
+            "Star_rating": "1",
             "Year": "2015",
             "isFeatured": "TRUE"
         },
         {
-            "S.No.": "49",
-            "Movie name": "The Day After Tomorrow",
-            "Star rating": "5",
+            "Serial": "49",
+            "Movie_name": "The Day After Tomorrow",
+            "Star_rating": "5",
             "Year": "2004",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "91",
-            "Movie name": "The Jungle Book",
-            "Star rating": "1",
+            "Serial": "91",
+            "Movie_name": "The Jungle Book",
+            "Star_rating": "1",
             "Year": "2016",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "30",
-            "Movie name": "The Twilight Saga: New Moon",
-            "Star rating": "5",
+            "Serial": "30",
+            "Movie_name": "The Twilight Saga: New Moon",
+            "Star_rating": "5",
             "Year": "2009",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "28",
-            "Movie name": "Transformers",
-            "Star rating": "2",
+            "Serial": "28",
+            "Movie_name": "Transformers",
+            "Star_rating": "2",
             "Year": "2007",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "74",
-            "Movie name": "Transformers: Dark of the Moon",
-            "Star rating": "4",
+            "Serial": "74",
+            "Movie_name": "Transformers: Dark of the Moon",
+            "Star_rating": "4",
             "Year": "2011",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "29",
-            "Movie name": "Up",
-            "Star rating": "3",
+            "Serial": "29",
+            "Movie_name": "Up",
+            "Star_rating": "3",
             "Year": "2009",
             "isFeatured": "TRUE"
         },
         {
-            "S.No.": "44",
-            "Movie name": "I Am Legend",
-            "Star rating": "1",
+            "Serial": "44",
+            "Movie_name": "I Am Legend",
+            "Star_rating": "1",
             "Year": "2007",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "22",
-            "Movie name": "Indiana Jones and the Kingdom of the Crystal Skull",
-            "Star rating": "4",
+            "Serial": "22",
+            "Movie_name": "Indiana Jones and the Kingdom of the Crystal Skull",
+            "Star_rating": "4",
             "Year": "2008",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "92",
-            "Movie name": "Jumanji: Welcome to the Jungle",
-            "Star rating": "1",
+            "Serial": "92",
+            "Movie_name": "Jumanji: Welcome to the Jungle",
+            "Star_rating": "1",
             "Year": "2017",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "63",
-            "Movie name": "Jurassic World: Fallen Kingdom",
-            "Star rating": "3",
+            "Serial": "63",
+            "Movie_name": "Jurassic World: Fallen Kingdom",
+            "Star_rating": "3",
             "Year": "2018",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "33",
-            "Movie name": "Star Wars: Episode II – Attack of the Clones",
-            "Star rating": "4",
+            "Serial": "33",
+            "Movie_name": "Star Wars: Episode II – Attack of the Clones",
+            "Star_rating": "4",
             "Year": "2002",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "17",
-            "Movie name": "Star Wars: Episode III – Revenge of the Sith",
-            "Star rating": "1",
+            "Serial": "17",
+            "Movie_name": "Star Wars: Episode III – Revenge of the Sith",
+            "Star_rating": "1",
             "Year": "2005",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "56",
-            "Movie name": "The Avengers",
-            "Star rating": "1",
+            "Serial": "56",
+            "Movie_name": "The Avengers",
+            "Star_rating": "1",
             "Year": "2012",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "25",
-            "Movie name": "The Chronicles of Narnia",
-            "Star rating": "5",
+            "Serial": "25",
+            "Movie_name": "The Chronicles of Narnia",
+            "Star_rating": "5",
             "Year": "2005",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "88",
-            "Movie name": "The Hobbit: An Unexpected Journey",
-            "Star rating": "2",
+            "Serial": "88",
+            "Movie_name": "The Hobbit: An Unexpected Journey",
+            "Star_rating": "2",
             "Year": "2012",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "80",
-            "Movie name": "Toy Story 3",
-            "Star rating": "4",
+            "Serial": "80",
+            "Movie_name": "Toy Story 3",
+            "Star_rating": "4",
             "Year": "2010",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "18",
-            "Movie name": "Transformers: Revenge of the Fallen",
-            "Star rating": "5",
+            "Serial": "18",
+            "Movie_name": "Transformers: Revenge of the Fallen",
+            "Star_rating": "5",
             "Year": "2009",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "58",
-            "Movie name": "Avengers: Age of Ultron",
-            "Star rating": "4",
+            "Serial": "58",
+            "Movie_name": "Avengers: Age of Ultron",
+            "Star_rating": "4",
             "Year": "2015",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "51",
-            "Movie name": "Avengers: Endgame",
-            "Star rating": "4",
+            "Serial": "51",
+            "Movie_name": "Avengers: Endgame",
+            "Star_rating": "4",
             "Year": "2019",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "65",
-            "Movie name": "Beauty and the Beast",
-            "Star rating": "2",
+            "Serial": "65",
+            "Movie_name": "Beauty and the Beast",
+            "Star_rating": "2",
             "Year": "2017",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "70",
-            "Movie name": "Captain America: Civil War",
-            "Star rating": "4",
+            "Serial": "70",
+            "Movie_name": "Captain America: Civil War",
+            "Star_rating": "4",
             "Year": "2016",
             "isFeatured": "TRUE"
         },
         {
-            "S.No.": "90",
-            "Movie name": "Despicable Me 2",
-            "Star rating": "3",
+            "Serial": "90",
+            "Movie_name": "Despicable Me 2",
+            "Star_rating": "3",
             "Year": "2013",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "85",
-            "Movie name": "Finding Dory",
-            "Star rating": "2",
+            "Serial": "85",
+            "Movie_name": "Finding Dory",
+            "Star_rating": "2",
             "Year": "2016",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "36",
-            "Movie name": "Hancock",
-            "Star rating": "2",
+            "Serial": "36",
+            "Movie_name": "Hancock",
+            "Star_rating": "2",
             "Year": "2008",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "7",
-            "Movie name": "Harry Potter and the Order of the Phoenix",
-            "Star rating": "1",
+            "Serial": "7",
+            "Movie_name": "Harry Potter and the Order of the Phoenix",
+            "Star_rating": "1",
             "Year": "2007",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "5",
-            "Movie name": "Harry Potter and the Philosopher's Stone",
-            "Star rating": "4",
+            "Serial": "5",
+            "Movie_name": "Harry Potter and the Philosopher's Stone",
+            "Star_rating": "4",
             "Year": "2001",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "21",
-            "Movie name": "Harry Potter and the Prisoner of Azkaban",
-            "Star rating": "1",
+            "Serial": "21",
+            "Movie_name": "Harry Potter and the Prisoner of Azkaban",
+            "Star_rating": "1",
             "Year": "2004",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "99",
-            "Movie name": "Ice Age: Continental Drift",
-            "Star rating": "1",
+            "Serial": "99",
+            "Movie_name": "Ice Age: Continental Drift",
+            "Star_rating": "1",
             "Year": "2012",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "39",
-            "Movie name": "Mamma Mia!",
-            "Star rating": "1",
+            "Serial": "39",
+            "Movie_name": "Mamma Mia!",
+            "Star_rating": "1",
             "Year": "2008",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "3",
-            "Movie name": "Pirates of the Caribbean: Dead Man's Chest",
-            "Star rating": "5",
+            "Serial": "3",
+            "Movie_name": "Pirates of the Caribbean: Dead Man's Chest",
+            "Star_rating": "5",
             "Year": "2006",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "20",
-            "Movie name": "Shrek the Third",
-            "Star rating": "3",
+            "Serial": "20",
+            "Movie_name": "Shrek the Third",
+            "Star_rating": "3",
             "Year": "2007",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "75",
-            "Movie name": "Skyfall",
-            "Star rating": "2",
+            "Serial": "75",
+            "Movie_name": "Skyfall",
+            "Star_rating": "2",
             "Year": "2012",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "23",
-            "Movie name": "Spider-Man 2",
-            "Star rating": "2",
+            "Serial": "23",
+            "Movie_name": "Spider-Man 2",
+            "Star_rating": "2",
             "Year": "2004",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "72",
-            "Movie name": "Spider-Man: Far From Home",
-            "Star rating": "3",
+            "Serial": "72",
+            "Movie_name": "Spider-Man: Far From Home",
+            "Star_rating": "3",
             "Year": "2019",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "24",
-            "Movie name": "The Da Vinci Code",
-            "Star rating": "5",
+            "Serial": "24",
+            "Movie_name": "The Da Vinci Code",
+            "Star_rating": "5",
             "Year": "2006",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "4",
-            "Movie name": "The Dark Knight",
-            "Star rating": "3",
+            "Serial": "4",
+            "Movie_name": "The Dark Knight",
+            "Star_rating": "3",
             "Year": "2008",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "15",
-            "Movie name": "The Lord of the Rings: The Fellowship of the Ring",
-            "Star rating": "5",
+            "Serial": "15",
+            "Movie_name": "The Lord of the Rings: The Fellowship of the Ring",
+            "Star_rating": "5",
             "Year": "2001",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "2",
-            "Movie name": "The Lord of the Rings: The Return of the King",
-            "Star rating": "2",
+            "Serial": "2",
+            "Movie_name": "The Lord of the Rings: The Return of the King",
+            "Star_rating": "2",
             "Year": "2003",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "78",
-            "Movie name": "Toy Story 4",
-            "Star rating": "5",
+            "Serial": "78",
+            "Movie_name": "Toy Story 4",
+            "Star_rating": "5",
             "Year": "2019",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "76",
-            "Movie name": "Transformers: Age of Extinction",
-            "Star rating": "3",
+            "Serial": "76",
+            "Movie_name": "Transformers: Age of Extinction",
+            "Star_rating": "3",
             "Year": "2014",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "27",
-            "Movie name": "2012",
-            "Star rating": "3",
+            "Serial": "27",
+            "Movie_name": "2012",
+            "Star_rating": "3",
             "Year": "2009",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "82",
-            "Movie name": "Aladdin",
-            "Star rating": "2",
+            "Serial": "82",
+            "Movie_name": "Aladdin",
+            "Star_rating": "2",
             "Year": "2019",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "71",
-            "Movie name": "Aquaman",
-            "Star rating": "4",
+            "Serial": "71",
+            "Movie_name": "Aquaman",
+            "Star_rating": "4",
             "Year": "2018",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "1",
-            "Movie name": "Avatar",
-            "Star rating": "5",
+            "Serial": "1",
+            "Movie_name": "Avatar",
+            "Star_rating": "5",
             "Year": "2009",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "60",
-            "Movie name": "Black Panther",
-            "Star rating": "5",
+            "Serial": "60",
+            "Movie_name": "Black Panther",
+            "Star_rating": "5",
             "Year": "2018",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "96",
-            "Movie name": "Bohemian Rhapsody",
-            "Star rating": "3",
+            "Serial": "96",
+            "Movie_name": "Bohemian Rhapsody",
+            "Star_rating": "3",
             "Year": "2018",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "41",
-            "Movie name": "Casino Royale",
-            "Star rating": "5",
+            "Serial": "41",
+            "Movie_name": "Casino Royale",
+            "Star_rating": "5",
             "Year": "2006",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "61",
-            "Movie name": "Harry Potter and the Deathly Hallows – Part 2",
-            "Star rating": "3",
+            "Serial": "61",
+            "Movie_name": "Harry Potter and the Deathly Hallows – Part 2",
+            "Star_rating": "3",
             "Year": "2011",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "13",
-            "Movie name": "Ice Age: Dawn of the Dinosaurs",
-            "Star rating": "3",
+            "Serial": "13",
+            "Movie_name": "Ice Age: Dawn of the Dinosaurs",
+            "Star_rating": "3",
             "Year": "2009",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "45",
-            "Movie name": "Iron Man",
-            "Star rating": "4",
+            "Serial": "45",
+            "Movie_name": "Iron Man",
+            "Star_rating": "4",
             "Year": "2008",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "34",
-            "Movie name": "Kung Fu Panda",
-            "Star rating": "1",
+            "Serial": "34",
+            "Movie_name": "Kung Fu Panda",
+            "Star_rating": "1",
             "Year": "2008",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "69",
-            "Movie name": "Minions",
-            "Star rating": "1",
+            "Serial": "69",
+            "Movie_name": "Minions",
+            "Star_rating": "1",
             "Year": "2015",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "48",
-            "Movie name": "Mission: Impossible 2",
-            "Star rating": "3",
+            "Serial": "48",
+            "Movie_name": "Mission: Impossible 2",
+            "Star_rating": "3",
             "Year": "2000",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "6",
-            "Movie name": "Pirates of the Caribbean: At World's End",
-            "Star rating": "2",
+            "Serial": "6",
+            "Movie_name": "Pirates of the Caribbean: At World's End",
+            "Star_rating": "2",
             "Year": "2007",
             "isFeatured": "TRUE"
         },
         {
-            "S.No.": "37",
-            "Movie name": "Ratatouille",
-            "Star rating": "2",
+            "Serial": "37",
+            "Movie_name": "Ratatouille",
+            "Star_rating": "2",
             "Year": "2007",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "10",
-            "Movie name": "Shrek 2",
-            "Star rating": "4",
+            "Serial": "10",
+            "Movie_name": "Shrek 2",
+            "Star_rating": "4",
             "Year": "2004",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "97",
-            "Movie name": "Spectre",
-            "Star rating": "4",
+            "Serial": "97",
+            "Movie_name": "Spectre",
+            "Star_rating": "4",
             "Year": "2015",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "19",
-            "Movie name": "Spider-Man",
-            "Star rating": "3",
+            "Serial": "19",
+            "Movie_name": "Spider-Man",
+            "Star_rating": "3",
             "Year": "2002",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "12",
-            "Movie name": "Spider-Man 3",
-            "Star rating": "2",
+            "Serial": "12",
+            "Movie_name": "Spider-Man 3",
+            "Star_rating": "2",
             "Year": "2007",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "62",
-            "Movie name": "Star Wars: The Last Jedi",
-            "Star rating": "2",
+            "Serial": "62",
+            "Movie_name": "Star Wars: The Last Jedi",
+            "Star_rating": "2",
             "Year": "2017",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "94",
-            "Movie name": "The Hobbit: The Desolation of Smaug",
-            "Star rating": "2",
+            "Serial": "94",
+            "Movie_name": "The Hobbit: The Desolation of Smaug",
+            "Star_rating": "2",
             "Year": "2013",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "55",
-            "Movie name": "The Lion King",
-            "Star rating": "2",
+            "Serial": "55",
+            "Movie_name": "The Lion King",
+            "Star_rating": "2",
             "Year": "2019",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "9",
-            "Movie name": "The Lord of the Rings: The Two Towers",
-            "Star rating": "1",
+            "Serial": "9",
+            "Movie_name": "The Lord of the Rings: The Two Towers",
+            "Star_rating": "1",
             "Year": "2002",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "26",
-            "Movie name": "The Matrix Reloaded",
-            "Star rating": "4",
+            "Serial": "26",
+            "Movie_name": "The Matrix Reloaded",
+            "Star_rating": "4",
             "Year": "2003",
             "isFeatured": "FALSE"
         },
         {
-            "S.No.": "42",
-            "Movie name": "War of the Worlds",
-            "Star rating": "2",
+            "Serial": "42",
+            "Movie_name": "War of the Worlds",
+            "Star_rating": "2",
             "Year": "2005",
             "isFeatured": "FALSE"
         }
     ]
 };
 
-console.log(list_of_all_movies.Sheet1[0]);
+var list_of_all_the_thumbnails = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w"];
+
 
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -719,14 +773,79 @@ app.get("/",function(req,res){
 	res.render("index.ejs")
 });
 
-app.get("/home",function(req,res){
-	res.render("home.ejs");
-});
+app.post("/logout",function(req,res)
+    {
+        res.redirect("/");
+    });
+
 
 app.post("/home",function(req,res){
 
-	console.log(req.body.email);
-	res.redirect("/home");
+
+	// console.log(req.body.email);
+	res.render("home.ejs",{
+        "list_of_movies"  : list_of_all_movies,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    });
+
+});
+
+app.post("/home_sort_by_name",function(req,res){
+
+    var list_of_all_movies_sorted_by_movie_name = {
+    "Sheet1" : list_of_all_movies.Sheet1.sort((a, b) => (a.Movie_name > b.Movie_name) ? 1 : -1),
+    };
+
+    res.render("home.ejs",{
+        "list_of_movies"  : list_of_all_movies_sorted_by_movie_name,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    });
+
+    // console.log(list_of_all_movies_sorted_by_movie_name);
+    console.log("THIS IS SORT BY NAME");
+});
+
+app.post("/home_sort_by_year",function(req,res){
+
+    var list_of_all_movies_sorted_by_year = {
+    "Sheet1" : list_of_all_movies.Sheet1.sort((a, b) => (a.Year > b.Year) ? 1 : -1),
+    };
+    // console.log(list_of_all_movies_sorted_by_year);
+
+    // console.log(list_of_all_movies.Sheet1.length);
+
+    res.render("home.ejs",{
+        "list_of_movies"  : list_of_all_movies_sorted_by_year,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    });
+    console.log("THIS IS SORT BY YEAR");
+});
+
+app.post("/home_sort_by_rating",function(req,res){
+
+    var list_of_all_movies_sorted_by_star_rating = {
+    "Sheet1" : list_of_all_movies.Sheet1.sort((a, b) => (a.Star_rating < b.Star_rating) ? 1 : -1),
+    } ;
+    // console.log(list_of_all_movies_sorted_by_star_rating);
+
+    res.render("home.ejs",{
+        "list_of_movies"  : list_of_all_movies_sorted_by_star_rating,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    }); 
+    console.log("THIS IS SORT BY RATING");
+});
+
+app.get("/info_page/:Movie_name/:Star_rating/:Year",function(req,res){
+
+    // res.send(req.params);
+    var details_of_the_movie = req.params;
+    // console.log(details_of_the_movie);
+    res.render("info_page.ejs",{
+        "list_of_featured_movies" : list_of_featured_movies, 
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+        "details_of_the_movie" : details_of_the_movie,
+    });
+    console.log("THE POST REQUEST WAS CAUGHT FOR ANY MOVIE");
 });
 
 app.get("*",function(req,res)

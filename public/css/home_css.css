@@ -2,7 +2,7 @@
 {
 	background-color: #FFDE72;
 	min-height: 4vh;
-	padding: 4px;
+	padding: 7px;
 }
 #box_for_search_bar
 {
@@ -45,6 +45,7 @@
 	padding-right:  10px;
 	padding-top: 3px;
 	padding-bottom: 4px;
+	cursor:pointer;
 }
 #decorations_of_by_year_sort
 {
@@ -54,6 +55,7 @@
 	padding-right:  10px;
 	padding-top: 3px;
 	padding-bottom: 4px;
+	cursor:pointer;
 }
 #decorations_of_by_rating_sort
 {
@@ -63,6 +65,7 @@
 	padding-right:  10px;
 	padding-top: 3px;
 	padding-bottom: 4px;
+	cursor:pointer;
 }
 #decorations_of_by_sort_sort
 {
@@ -72,5 +75,57 @@
 	padding-right:  10px;
 	padding-top: 3px;
 	padding-bottom: 4px;
-	margin-left: 25px;
+	cursor:pointer;
 }
+#decorations_of_logout
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	margin-left: 15px;
+	cursor:pointer;
+}
+.vertical_1
+{
+	padding: 30px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 /*border: 5px solid black;*/
+}
+.vertical_2
+{
+	padding: 30px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 /*border: 5px solid black;*/
+}
+.vertical_3
+{
+
+	 padding: 30px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 /*border: 5px solid black;*/
+}
+
+#box_for_all_the_cards
+{
+	padding-top: 50px;
+}
+
+.card-body
+{
+	text-align: center;
+
+}
+#info_symbol
+{
+	cursor:hand;
+}
+
