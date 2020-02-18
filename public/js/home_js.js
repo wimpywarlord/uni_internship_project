@@ -27,8 +27,23 @@ function logout()
 	$("#logout_form").submit();
 	console.log("THIS IS THE LOGOUT FUNCTION BEING EXECUTED.");
 }
-function info_symbol()
+function info_symbol_1(i)
 {
-	$("#info_symbol_form").submit();
-	console.log("INFO BUTTON CLICKED");
+	console.log($("#info_symbol_form_"+ i.toString()).attr('action'));
+	$("#info_symbol_form_" + i.toString()).submit();
+	console.log("info button was clicked in the row");
+}
+
+function info_symbol_2(i)
+{
+	console.log($("#info_symbol_form_"+ (i+1).toString()).attr('action'));
+	$("#info_symbol_form_" + (i+1).toString()).submit();
+	console.log("info button was clicked in the row");
+}
+
+function info_symbol_3(i)
+{
+	console.log($("#info_symbol_form_"+ (i+2).toString()).attr('action'));
+	$("#info_symbol_form_" + (i+2).toString()).submit();
+	console.log("info button was clicked in the row");
 }

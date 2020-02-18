@@ -16,8 +16,52 @@
   }
 }
 
+
+
+/*THE AREA FOR CARD OF MOVIE*/
+
+html
+{
+   background-color: #212F3D;
+}
+
+body
+{
+  background-color: #212F3D;
+}
+
 #box_below_the_carousel
 {
-	background-color: #212F3D;
-	min-height: 65vh;
+  background-color: #212F3D;
+  min-height: 100%;
+  padding-top: 8vh;
 }
+
+#my_card
+{
+  text-align: center;
+  padding: 30px;
+  margin: 0 auto;
+  background-color: #1C2833;
+  max-width: 30%;
+  min-width: 30%;
+  min-height: 60%;
+  color:#F4F6F7 ;
+  box-shadow: -0.1px -0.1px 6px 4px #17202A;
+
+}
+
+#heading_of_the_card
+{
+  font-size: 4vw;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+}
+
+#year_of_the_movie
+{
+  font-size: 2vw;  
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+}
+/*THE AREA FOR CARD OF MOVIE*/
