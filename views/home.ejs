@@ -158,17 +158,18 @@
     </div>
     <div class="caption text-center">
       <h1>You might want to decide fast. ...</h1>
-      <form id="search_box_form" method="get">
-        <input
+      <form action="/search_movie" id="search_box_form" method="POST">
+
+          <input
+          name="search_value"
           id="search_box"
           type="text"
-          placeholder="Search"
+          placeholder="Search Movie"
           class="text-box"
-          name="s"
-        />
-        <button class="btn" type="submit">
-          SEARCH
-        </button>
+          />
+          <button class="btn" type="submit">
+            SEARCH
+          </button>
         <div class="clear"></div>
       </form>
 	</div>
