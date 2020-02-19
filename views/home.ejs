@@ -1,75 +1,121 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Kshitij Dhyani</title>
-	<!-- CSS -->
-	
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="\css\home_css.css">
-	<!-- CSS RESETTER -->
-		<link rel="stylesheet" type="text/css" href="\css\css_resetter.css">
+  <head>
+    <title>Kshitij Dhyani</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="\css\home_css.css" />
+    <!-- CSS RESETTER -->
+    <link rel="stylesheet" type="text/css" href="\css\css_resetter.css" />
 
-	<!-- GRID DEBUGGER -->
-		<!-- <link rel="stylesheet" type="text/css" href="\css\grid_debugger.css">
+    <!-- GRID DEBUGGER -->
+    <!-- <link rel="stylesheet" type="text/css" href="\css\grid_debugger.css">
  -->
-	<!-- BOOTSTRAP -->
-	<script src="https://use.fontawesome.com/47a92560c0.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css">
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-	<!-- JAVASCRIPT -->
-	
-		<script type="text/javascript" src="/js/home_js.js"></script>
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="/js/home_js.js"></script>
 
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
 
-	<!-- JQUERY -->
-		<script
-		  src="https://code.jquery.com/jquery-3.4.1.min.js"
-		  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-		  crossorigin="anonymous"></script>
-</head>
-<body>
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-		<a class="navbar-brand" href="#">
-			<div id="home_page_nav_bar" class="row">
-				<form id="logout_form" action="/logout" method="POST">
-					<span onclick="logout()" id="decorations_of_logout">Logout</span>
-				</form>	
-			</div>
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-	
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="https://github.com/wimpywarlord/uni_internship_project">Contribute</a>
-				</li>
-			
-				<li class="nav-item">
-					<a class="nav-link-svg" href="https://in.linkedin.com/in/kshitijdhyani">
-						<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="30px" height="30px" fill="white" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
-<g>
-	<g id="post-linkedin">
-		<path d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z
+    <!-- FONT AWSOME -->
+    <script src="https://use.fontawesome.com/47a92560c0.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css"
+    />
+  </head>
+  <body>
+    <!--navbar start-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <div id="home_page_nav_bar" class="row">
+          <form id="logout_form" action="/logout" method="POST">
+            <span onclick="logout()" id="decorations_of_logout">Logout</span>
+          </form>
+        </div>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://github.com/wimpywarlord/uni_internship_project"
+              >Contribute</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link-svg"
+              href="https://in.linkedin.com/in/kshitijdhyani"
+            >
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="30px"
+                height="30px"
+                fill="white"
+                viewBox="0 0 510 510"
+                style="enable-background:new 0 0 510 510;"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="post-linkedin">
+                    <path
+                      d="M459,0H51C22.95,0,0,22.95,0,51v408c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z
 			 M153,433.5H76.5V204H153V433.5z M114.75,160.65c-25.5,0-45.9-20.4-45.9-45.9s20.4-45.9,45.9-45.9s45.9,20.4,45.9,45.9
 			S140.25,160.65,114.75,160.65z M433.5,433.5H357V298.35c0-20.399-17.85-38.25-38.25-38.25s-38.25,17.851-38.25,38.25V433.5H204
-			V204h76.5v30.6c12.75-20.4,40.8-35.7,63.75-35.7c48.45,0,89.25,40.8,89.25,89.25V433.5z"/>
-	</g>
-</g>
-</svg>
-					</a>
-				</li>
-						
-				<li class="nav-item">
-					<a class="nav-link-svg" href="https://github.com/wimpywarlord">
-						
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-width="30px" height="30px" fill="white" viewBox="0 0 438.549 438.549" style="enable-background:new 0 0 438.549 438.549;"
-xml:space="preserve">
-<g>
-<path d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
+			V204h76.5v30.6c12.75-20.4,40.8-35.7,63.75-35.7c48.45,0,89.25,40.8,89.25,89.25V433.5z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link-svg" href="https://github.com/wimpywarlord">
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="30px"
+                height="30px"
+                fill="white"
+                viewBox="0 0 438.549 438.549"
+                style="enable-background:new 0 0 438.549 438.549;"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
    c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
    c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996
    c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136
@@ -88,242 +134,213 @@ xml:space="preserve">
    c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146
    c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995
    c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906
-   C438.536,184.851,428.728,148.168,409.132,114.573z"/>
-</g>
-</svg>
+   C438.536,184.851,428.728,148.168,409.132,114.573z"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-					</a>
-				</li>
+	<!--navbar end-->
 	
-				
-			</ul>
-		</div>
+    <!--starting box with image-->
+
+
+    <div class="landing">
+      <div class="home-wrap">
+        <div class="home-inner">
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="caption text-center">
+      <h1>You might want to decide fast. ...</h1>
+      <form id="search_box_form" method="get">
+        <input
+          id="search_box"
+          type="text"
+          placeholder="Search"
+          class="text-box"
+          name="s"
+        />
+        <button class="btn" type="submit">
+          SEARCH
+        </button>
+        <div class="clear"></div>
+      </form>
+	</div>
+	
+	<!--starting box with image end-->
+
+	<!--sorting bar start-->
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__group">
+          <form
+            class="menu__link"
+            id="post_selection_for_home_sort_by_name"
+            action="/home_sort_by_name"
+            method="POST"
+          >
+            <span onclick="sort_by_name()" id="decorations_of_by_name_sort"
+              >By name</span
+            >
+          </form>
+        </li>
+        <li class="menu__group">
+          <form
+            class="menu__link"
+            id="post_selection_for_home_sort_by_year"
+            action="/home_sort_by_year"
+            method="POST"
+          >
+            <span onclick="sort_by_year()" id="decorations_of_by_year_sort"
+              >By year</span
+            >
+          </form>
+        </li>
+        <li class="menu__group">
+          <form
+            class="menu__link"
+            id="post_selection_for_home_sort_by_rating"
+            action="/home_sort_by_rating"
+            method="POST"
+          >
+            <span onclick="sort_by_rating()" id="decorations_of_by_rating_sort"
+              >By rating</span
+            >
+          </form>
+        </li>
+      </ul>
 	</nav>
 	
-<div class="landing">
-	<div class="home-wrap">
-		<div class="home-inner">
-			<div class="layer">
+	<!--sorting bar end-->
 
-			</div>
-		</div>
-	</div>
-</div>
-<div class="caption text-center">
-		<h1>You might want to decide fast. ...</h1>
-		<form id="search_box_form" method="get">
-			 <input id="search_box" type="text" placeholder="Search" class="text-box" name="s"> 
-			 <button class="btn" type="submit">
-				 SEARCH
-			</button>
-			<div class="clear">
-			</div>
-		</form>
-	</div>
 
-	
-		<nav class="menu">
-		  <ul class="menu__list">
-			<li class="menu__group">
-				<form class="menu__link" id="post_selection_for_home_sort_by_name" action="/home_sort_by_name" method="POST">
-					<span onclick="sort_by_name()" id="decorations_of_by_name_sort">By name</span>
-				</form>
-			</li>
-			<li class="menu__group">
-				<form class="menu__link" id="post_selection_for_home_sort_by_year" action="/home_sort_by_year" method="POST">
-					<span onclick="sort_by_year()" id="decorations_of_by_year_sort">By year</span>
-				</form>
-			</li>
-			<li class="menu__group">
-				<form class="menu__link" id="post_selection_for_home_sort_by_rating" action="/home_sort_by_rating" method="POST">
-
-	<div id="box_for_sort_options" class="row">
-		<div class="col-lg-1"></div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-1"></div>
-		<div class="col-lg-1">
-			<form id="post_selection_for_home_sort_by_random" action="/home" method="POST">
-				<span onclick="sort_by_random()" id="decorations_of_by_sort_sort">Random  </span>
-			</form>
-		</div>
-		<div class="col-lg-1">
-			<form id="post_selection_for_home_sort_by_name" action="/home_sort_by_name" method="POST">
-				<span onclick="sort_by_name()" id="decorations_of_by_name_sort">By name</span>
-			</form>
-		</div>
-		<div class="col-lg-1">
-			<form id="post_selection_for_home_sort_by_year" action="/home_sort_by_year" method="POST">
-				<span onclick="sort_by_year()" id="decorations_of_by_year_sort">By year</span>
-			</form>
-		</div>
-		<div  class="col-lg-1">
-			<form id="post_selection_for_home_sort_by_rating" action="/home_sort_by_rating" method="POST">
-
-				<span onclick="sort_by_rating()" id="decorations_of_by_rating_sort">By rating</span>
-			</form>
-			</li>
-			
-		  </ul>
-		</nav>
-	  
-	  
-	
-	<!-- 	<%for(var i = 0 ; i< list_of_movies.Sheet1.length ;i++ ) {%>
+    <!-- 	<%for(var i = 0 ; i< list_of_movies.Sheet1.length ;i++ ) {%>
 			<p><%=list_of_movies.Sheet1[i].Movie_name%></p>
 		<%}%> -->
 
-	<div id="box_for_all_the_cards">
+    <div id="box_for_all_the_cards">
+      <% for(var i = 0 ; i < list_of_movies.Sheet1.length ; i++ ) { %>
+      <div class="row all_rows_of_cards">
+        <div class="col-lg-4 ">
+          <div class="vertical_1">
+            <div class="card" style="width: 18rem;">
+              <div class="card-img-block">
+                <img
+                  src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>"
+                  class="card-img-top"
+                  alt="MOVIE"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%=list_of_movies.Sheet1[i].Movie_name%>
+                </h5>
+                <div class="stars">
+                  <%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++
+                  ) { %>
+                  <i class="fas fa-star"></i>
+                  <%}%>
+                </div>
+                <form
+                  id="info_symbol_form"
+                  action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>"
+                  method="GET"
+                >
+                  <button
+                    onclick="info_symbol_1(<%=i%>)"
+                    type="button"
+                    class="btn btn-dark"
+                  >
+                    info
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 ">
+          <div class="vertical_2">
+            <div class="card" style="width: 18rem;">
+              <div class="card-img-block">
+                <img
+                  src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>"
+                  class="card-img-top"
+                  alt="MOVIE"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%=list_of_movies.Sheet1[i].Movie_name%>
+                </h5>
+                <div class="stars">
+                  <%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++
+                  ) { %>
+                  <i class="fas fa-star"></i>
+                  <%}%>
+                </div>
+                <form
+                  id="info_symbol_form"
+                  action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>"
+                  method="GET"
+                >
+                  <button
+                    onclick="info_symbol_2(<%=i%>)"
+                    type="button"
+                    class="btn btn-dark"
+                  >
+                    info
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 ">
+          <div class="vertical_3">
+            <div class="card" style="width: 18rem;">
+              <div class="card-img-block">
+                <img
+                  src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>"
+                  class="card-img-top"
+                  alt="MOVIE"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%=list_of_movies.Sheet1[i].Movie_name%>
+                </h5>
+                <div class="stars">
+                  <%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++
+                  ) { %>
+                  <i class="fas fa-star"></i>
+                  <%}%>
+                </div>
+                <form
+                  id="info_symbol_form"
+                  action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>"
+                  method="GET"
+                >
+                  <button
+                    onclick="info_symbol_3(<%=i%>)"
+                    type="button"
+                    class="btn btn-dark"
+                  >
+                    info
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-	<!-- 	<%for(var i = 0 ; i< list_of_movies.Sheet1.length ;i++ ) {%>
-			<p><%=list_of_movies.Sheet1[i].Movie_name%></p>
-		<%}%> -->
-
-		<div id="box_for_all_the_cards">
-
-			<% for(var i = 0 ; i < list_of_movies.Sheet1.length  ; i++ ) { %>
-				<div class="row all_rows_of_cards" >
-					<div class="col-lg-4 ">
-						<div class="vertical_1">
-							<div class="card" style="width: 18rem;">
-							<div class="card-img-block">
-							  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
-							</div> 
-							  <div class="card-body">
-								<h5 class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
-								<div class="stars">
-								  <%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
-								 {
-									 %>
-									 <i class="fas fa-star"></i>
-								 <%}%>
-								</div>
-								 <form id="info_symbol_form" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="GET">
-									 <button type="submit" type="button" class="btn btn-dark">info</button>
-								  </form>
-							  </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 ">
-						<div class="vertical_2">
-							<div class="card" style="width: 18rem;">
-								<div class="card-img-block">
-									<img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
-								  </div> 
-								<div class="card-body">
-								<h5 class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
-								<div class="stars">
-									<%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
-								   {
-									   %>
-									   <i class="fas fa-star"></i>
-								   <%}%>
-								  </div>
-								 <form id="info_symbol_form" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="GET">
-									 <button onclick="info_symbol()" type="button" class="btn btn-dark">info</button>
-								  </form>
-							  </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 ">
-						<div class="vertical_3">
-							<div class="card" style="width: 18rem;">
-								<div class="card-img-block">
-									<img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
-								  </div> 
-								<div class="card-body">
-								<h5 class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
-								<div class="stars">
-									<%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
-								   {
-									   %>
-									   <i class="fas fa-star"></i>
-								   <%}%>
-								  </div>
-								<form id="info_symbol_form" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="GET">
-									 <button onclick="info_symbol()" type="button" class="btn btn-dark">info</button>
-								  </form>
-							  </div>
-							</div>
-
-
-
-		<% for(var i = 0 ; i < list_of_movies.Sheet1.length - 3   ; i=i+3 ) { 
-		console.log(i);
-
-		%>
-
-			<div class="row all_rows_of_cards" >
-				<div class="col-lg-4 ">
-					<div class="vertical_1">
-						<div class="card" style="width: 18rem;">
-						  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
-						  <div class="card-body">
-						    <h5 style="margin-bottom: 0px;" class="card-title"><%=list_of_movies.Sheet1[i].Movie_name%></h5>
-						      <%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
-						     {
-						     	%>
-						     	
-						     	<i class="fas fa-star"></i>
-						     	
-						     <%}%>
-						     <br>
-						     <form id="info_symbol_form_<%=i%>" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="GET">
-							     <button onclick="info_symbol_1(<%=i%>)" type="button" class="btn btn-dark">info</button>
-							  </form>
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 ">
-					<div class="vertical_2">
-						<div class="card" style="width: 18rem;">
-						  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
-						  <div class="card-body">
-						    <h5 style="margin-bottom: 0px;" class="card-title"><%=list_of_movies.Sheet1[i+1].Movie_name%></h5>
-						     <%for(var j =0 ; j< list_of_movies.Sheet1[i+1].Star_rating ; j++ )
-						     {
-
-						     	%>
-
-						     	<i class="fas fa-star"></i>
-
-						     <%}%>
-						     <br>
-						     <form id="info_symbol_form_<%=i+1%>" action="/info_page/<%=list_of_movies.Sheet1[i+1].Movie_name%>/<%=list_of_movies.Sheet1[i+1].Star_rating%>/<%=list_of_movies.Sheet1[i+1].Year%>" method="GET">
-							     <button onclick="info_symbol_2(<%=i%>)" type="button" class="btn btn-dark">info</button>
-							  </form>
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 ">
-					<div class="vertical_3">
-						<div class="card" style="width: 18rem;">
-						  <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">
-						  <div class="card-body">
-						    <h5 style="margin-bottom: 0px;" class="card-title"><%=list_of_movies.Sheet1[i+2].Movie_name%></h5>
-						     <%for(var j =0 ; j< list_of_movies.Sheet1[i+2].Star_rating ; j++ )
-						     {
-						     	%>
-						     	
-						     	<i class="fas fa-star"></i>
-						     	
-						     <%}%>
-						     <br>
-						    <form id="info_symbol_form_<%=i+2%>" action="/info_page/<%=list_of_movies.Sheet1[i+2].Movie_name%>/<%=list_of_movies.Sheet1[i+2].Star_rating%>/<%=list_of_movies.Sheet1[i+2].Year%>" method="GET">
-							     <button onclick="info_symbol_3(<%=i%>)" type="button" class="btn btn-dark">info</button>
-							  </form>
-						  </div>
-
-						</div>
-					</div>
-				</div>
-				
-			<% } %>
-		</div>
-	</body>
-	</html>
+      <% } %>
+    </div>
+  </body>
+</html>
