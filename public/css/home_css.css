@@ -1,211 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri|Lato|Yanone+Kaffeesatz&display=swap');
-/*--- Extra Bootstrap Column Padding --*/
-[class*="col-"] {
-	padding: 1rem;
-  }
-  
-  /*--- Bootstrap Mobile Gutter Fix --*/
-  .row, .container-fluid {
-  margin-left: 0px!important;
-  margin-right: 0px!important;
-  }
-  
-  /*--- Fix for Fixed Navbar jumping on scroll --*/
-  .fixed-top  {
-   -webkit-backface-visibility: hidden;
-  }
-  
-  /*--- Fixed Landing Page Section --*/
-  .landing {
-	position: relative;
-	width: 100%;
-	height: 60vh;
-	display: table;
-	z-index: -1;
-  }
-  .home-wrap {
-	clip: rect(0, auto, auto, 0);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-  }
-  .home-inner {
-	position: fixed;
-	display: table;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 60vh;
-	background-size: cover;
-	background-position: center center;
-	-webkit-transform: translateZ(0);
-			transform: translateZ(0);
-	will-change: transform;
-  }
-  
-  /*--- iOS Fixed Background Image --*/
-  .fixed-background {
-	position: relative;
-	width: 100%;
-  }
-  .fixed-wrap {
-	clip: rect(0, auto, auto, 0);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 50%;
-	z-index: -999!important;
-  }
-  .fixed {
-	position: fixed;
-	display: block;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 50%;
-	background-size: cover;
-	background-position: center center;
-	-webkit-transform: translateZ(0);
-			transform: translateZ(0);
-	will-change: transform;
-  }
-
-
-/*navigation*/
-.navbar{
-	height: 4rem;
-	background:rgba(0,0,0,0.7)!important ;
+#home_page_nav_bar
+{
+	background-color: #FFDE72;
+	min-height: 4vh;
+	padding: 7px;
 }
-  
-  .navbar-nav li{
-	padding-right:.7rem;
-  }
-  
-  .navbar-dark .navbar-nav .nav-link{
-	letter-spacing:.1rem;
-	font-family: 'Yanone Kaffeesatz';
-	font-size: 1.3rem;
-	
-	color:white;
-	padding-top:.4rem;
-  }
-
-  .navbar-dark .navbar-nav .nav-link-svg{
-	
-
-	padding-top:.9rem;
-	margin-left: 5px;
-  }
-  
-  
-  .navbar-dark .navbar-nav .nav-link:hover{
-	color:rgb(247, 144, 75);
-  }
-  
-  .navbar-dark .navbar-nav .nav-link-svg:hover+svg#Capa_1{
-	fill:rgb(247, 144, 75);
-  }
-
-  #decorations_of_logout{
-	  border: solid 1px white;
-	  padding: 6px;
-	  border-radius: 12px;
-	  font-family: 'Yanone Kaffeesatz';
-	  font-size: 1.3rem;
-	  letter-spacing: .1rem;
-	  transition: all .7s ease;
-  }
-
-  #decorations_of_logout:hover{
-	background-color: white;
-	color: black;
-}
-  
-  
-  .offset:before {
-  
-	display:block;
-	content:"";
-	height:4rem;
-   
-   }
-  
-  .text-box{
-	outline: none;
-	width:14rem;
-	margin-top: 20px;
-	height: 2.6rem;
-	border-radius: 12px;
-	border:solid;
-	color: white;
-	padding-left:5px;
-	background: none;
-	border-color: white;
-	transition: all 0.3s ease;
-  }
-  
-  .text-box:focus{
-	width:13rem;
-	border-width: 5px;
-  
-  }
-  
-  .caption .btn{
-	color:white;
-	font-family: 'Yanone Kaffeesatz';
-	font-size: 1.3rem;
-	letter-spacing: .1rem;
-	background: rgba(0,0,0,0.6);
-	border-width: 2px;
-	margin-left:10px;
-	padding:5px;
-	
-  }
-  .caption .btn:hover{
-	background:white;
-	color:black;
-	
-  }
-  /*start of landing page css*/
-  
-  .home-inner{
-	background: url(https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-	
-  }
-  
-  .layer {
-	background-color: rgba(22, 22, 21, 0.7);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-  }
-  
-  .caption{
-	width:100%;
-	max-width:100%;
-	position:absolute;
-	top:28%;
-	z-index: 1;
-	color:white;
-	text-transform: uppercase;
-  }
-  
-  .caption h1{
-	font-size:2.8rem;
-	
-	font-family: 'Anton', sans-serif;
-	letter-spacing:.3rem;
-	text-shadow: .1rem .1rem .8rem black;
-	padding-bottom: 1rem;
-  
-  }
-  
- 
 #box_for_search_bar
 {
 	min-height: 35vh;
@@ -218,142 +16,78 @@
 	*/
 	background-color: #FCF3CF;
 }
-
-/*sorting*/
-
-/* 
-=====
-EFFECT FADING OUT FOR SIBLINGS MENU OPTIONS 
-=====
-*/
-
-.sort_header{
-	color:white;
-	font-size: 2rem;
-	padding-top: 10px;
-	padding-bottom: 7px;
+#search_box_form
+{
+	position: relative;
+    display: block;
+    margin : auto;
+}
+#search_box
+{
+	min-width: 450px;
+	border-radius: 33px;
+	padding: 11px;
+}
+#box_for_sort_options
+{
+	background-color: #E6E6E6;
+}
+.col-lg-1
+{
+	padding: 8px;
 	text-align: center;
 }
-
-.menu:hover .menu__link:not(:hover){
-	filter: blur(5px);
-  }
-  
-  /* 
-  =====
-  MENU STYLES
-  =====
-  */
-  
-  /* core styles */
-  
-  .menu__list{
-	display: flex;  
-	text-align: center;
-	padding-left: 0;
-	margin-top: 0;
-	margin-bottom: 0;
-	list-style: none;  
-  }
-  
-  .menu__group{
-	flex-grow: 1;
-  }
-  
-  .menu__link{
-	display: block;
-  }
-  
-  /* skin */
-  
-  .menu{
-	background-color: #161616;
-	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
-  }
-  
-  .menu__link{
-	padding: 2rem 1.5rem;
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 1.3rem;
-	color: #fff;
-	text-decoration: none;
-	
-  }
-  
-  /* states */
-  .menu__link:focus{
-	outline: 2px solid #fff;
-  }
-  
-  /* hover animation */
-  
-  .menu__link{
-	position: relative;
-	overflow: hidden;
-  
-	will-change: color;
-	transition: color .25s ease-out;  
-  }
-  
-  .menu__link::before, 
-  .menu__link::after{
-	content: "";
-	width: 0;
-	height: 3px;
-	background-color: #fff;
-  
-	will-change: width;
-	transition: width .1s ease-out;
-  
-	position: absolute;
-	bottom: 0;
-  }
-  
-  .menu__link::before{
-	left: 50%;
-	transform: translateX(-50%); 
-  }
-  
-  .menu__link::after{
-	right: 50%;
-	transform: translateX(50%); 
-  }
-  
-  .menu__link:hover::before, 
-  .menu__link:hover::after{
-	width: 100%;
-	transition-duration: .2s;
-  }
-  
-  /*
-  =====
-  DEMO
-  =====
-  */
-  
-  @media (min-width: 768px){
-  
-	html{
-	  font-size: 62.5%;
-	}
-  }
-  
-  @media (max-width: 767px){
-  
-	html{
-	  font-size: 50%;
-	}
-  }
-  
-  body{
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
-	font-size: 1.6rem;
-	margin: 0;
-	min-height: 100vh;
-	display: flex;  
-	flex-direction: column;
-  }
-  
+#decorations_of_by_name_sort
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	cursor:pointer;
+}
+#decorations_of_by_year_sort
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	cursor:pointer;
+}
+#decorations_of_by_rating_sort
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	cursor:pointer;
+}
+#decorations_of_by_sort_sort
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	cursor:pointer;
+}
+#decorations_of_logout
+{
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left:  10px;
+	padding-right:  10px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	margin-left: 15px;
+	cursor:pointer;
+}
 .vertical_1
 {
 	padding: 30px;
@@ -382,28 +116,16 @@ EFFECT FADING OUT FOR SIBLINGS MENU OPTIONS
 
 #box_for_all_the_cards
 {
-	background-color: #252323;
 	padding-top: 50px;
 }
 
-.card-img-block {
-    width: 91%;
-    margin: 0 auto;
-    position: relative;
-    top: -20px;
-    
+.card-body
+{
+	text-align: center;
+
 }
-.card-img-block img{
-    border-radius:5px;
-    box-shadow:0 0 10px rgba(0,0,0,0.63);
+#info_symbol
+{
+	cursor:hand;
 }
 
-.card-body{
-	display: flex;
-	flex-direction: column;
-	align-self: center;
-}
-
-#info_symbol_form{
-	padding-top: 10px;
-}
