@@ -4,8 +4,9 @@
 [![Think Big](https://img.shields.io/badge/Think-Big-orange.svg?style=for-the-badge)](https://www.linkedin.com/in/kshitijdhyani/)
 [![Work Hard](https://img.shields.io/badge/Work-Hard-blue.svg?style=for-the-badge)](https://github.com/wimpywarlord)
 
-Here to build a small project as a test for UNI internship.
+Here to build a small project as a test for UNI internship. For starters it will be a movie suggesting/featuring website , lets see where it goes after that.
 
+Link to the website : https://movifyme.herokuapp.com/
 
 ## Getting Started
 
@@ -23,9 +24,8 @@ git clone <http url>
 
 Download and install node.js from [here](https://nodejs.org/en/download/).
 
-CD into the directory where you have cloned the repo and install all the dependencies.
+Check if all the dependencies specified in the ```package.json``` are installed.
 
-NPM install all dependencies specified in the ```package.json``` file.
 
 ## Prerequisites
 
