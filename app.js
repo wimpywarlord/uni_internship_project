@@ -890,6 +890,10 @@ app.get("/info_page/:Movie_name/:Star_rating/:Year",function(req,res){
     console.log("THE POST REQUEST WAS CAUGHT FOR ANY MOVIE");
 });
 
+app.get("/test",function(req,res){
+    res.render("test.ejs")
+});
+
 app.get("*",function(req,res)
 {
 	res.render("error_page.ejs");
