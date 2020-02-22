@@ -801,7 +801,7 @@ app.post("/search_movie",function(req,res){
     var the_name_of_the_movie_to_be_searched_in_lower_case = req.body.search_value.toLowerCase(); 
     for(var i = 0 ; i < list_of_all_movies.Sheet1.length ; i++)
     {
-        if((list_of_all_movies.Sheet1[i].Movie_name).includes(req.body.search_value))
+        if((list_of_all_movies.Sheet1[i].Movie_name.toLowerCase()).includes(req.body.search_value))
         {
 
             the_found_movie_details.Sheet1.push(list_of_all_movies.Sheet1[i]);
