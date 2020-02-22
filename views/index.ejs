@@ -14,14 +14,30 @@
 	<!-- BOOTSTRAP -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-	<!-- JAVASCRIPT -->
-		<script type="text/javascript" src="\js\index_js.js"></script>
 
 	<!-- JQUERY -->
 		<script
-		  src="https://code.jquery.com/jquery-3.4.1.min.js"
-		  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		  src="https://code.jquery.com/jquery-3.4.1.js"
+		  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		  crossorigin="anonymous"></script>
+
+	<!-- JAVASCRIPT -->
+		<script type="text/javascript" src="\js\index_js.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var oldVal;
+				$('#value_of_input_first_name,#value_of_input_email,#value_of_input_password').on('change textInput input', function () {
+				var val = this.value;
+				if (val !== oldVal) {
+				oldVal = val;
+				console.log("VALUE CHANGE TRIGGERED");
+				form_validation();
+				}
+				});
+  			});
+		</script>
+
 </head>
 <body>
 		<div class="parent">
@@ -47,7 +63,7 @@
 					 <small id="message_for_wrong_password"></small><br>
 					 <!-- SUBMIT BUTTON -->
 					 <div id="submit-button-box">
-					 	<button id="form-btn-submit" type="button" class="btn btn-primary" onclick="form_validation()">SignUp</button>
+					 	<button id="form-btn-submit" type="button" class="btn btn-primary" onclick="form_validation_submit()">SignUp</button>
 					 </div>
 				</form>
 			 </div>

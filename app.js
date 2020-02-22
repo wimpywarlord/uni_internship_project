@@ -791,6 +791,63 @@ app.post("/home_sort_by_name",function(req,res){
     console.log("THIS IS SORT BY NAME");
 });
 
+app.post("/search_movie",function(req,res){
+
+    var flag_found = 0;
+    var the_found_movie_details = { Sheet1 : [
+        
+        ]}
+    console.log(req.body.search_value);
+    var the_name_of_the_movie_to_be_searched_in_lower_case = req.body.search_value.toLowerCase(); 
+    for(var i = 0 ; i < list_of_all_movies.Sheet1.length ; i++)
+    {
+        if((list_of_all_movies.Sheet1[i].Movie_name.toLowerCase()).includes(req.body.search_value))
+        {
+
+            the_found_movie_details.Sheet1.push(list_of_all_movies.Sheet1[i]);
+            
+            
+            flag_found = 1;
+        }
+    }
+    if(flag_found === 1)
+    {
+        the_found_movie_details.Sheet1.push({
+            "Serial": "19",
+            "Movie_name": "Spider-Man",
+            "Star_rating": "3",
+            "Year": "2002",
+            "isFeatured": "FALSE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "45",
+            "Movie_name": "Iron Man",
+            "Star_rating": "4",
+            "Year": "2008",
+            "isFeatured": "FALSE"
+        });
+            the_found_movie_details.Sheet1.push({
+            "Serial": "22",
+            "Movie_name": "Indiana Jones and the Kingdom of the Crystal Skull",
+            "Star_rating": "4",
+            "Year": "2008",
+            "isFeatured": "FALSE"
+        });
+        res.render("home.ejs",{
+        "list_of_movies"  : the_found_movie_details,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+        });
+    }
+    else
+    {
+        res.render("home.ejs",{
+        "list_of_movies"  : list_of_all_movies,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+        });      
+    }
+
+});
+
 app.post("/home_sort_by_year",function(req,res){
 
     var list_of_all_movies_sorted_by_year = {
@@ -833,6 +890,10 @@ app.get("/info_page/:Movie_name/:Star_rating/:Year",function(req,res){
         "details_of_the_movie" : details_of_the_movie,
     });
     console.log("THE POST REQUEST WAS CAUGHT FOR ANY MOVIE");
+});
+
+app.get("/test",function(req,res){
+    res.render("test.ejs")
 });
 
 app.get("*",function(req,res)
