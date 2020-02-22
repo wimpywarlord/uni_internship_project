@@ -34,6 +34,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css"
     />
+    <style type="text/css">
+      #box_for_load_more_button
+      {
+        background-color:  #212529;
+        padding-bottom:  40px;
+      }
+      #load_more_button{
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <!--navbar start-->
@@ -226,7 +236,8 @@
 		<%}%> -->
 
     <div id="box_for_all_the_cards">
-		<% for(var i = 0 ; i < list_of_movies.Sheet1.length - 3   ; i=i+3 ) { 
+		<% var i =0;
+     while( i < 9 ) { 
 			console.log(i);
 			%>
       <div class="row all_rows_of_cards">
@@ -305,7 +316,15 @@
         </div>
       </div>
 
-      <% } %>
+      <%
+      i=i+3;
+       } %>
     </div>
+    <div class="row" id="box_for_load_more_button">
+      
+      <button onclick="increase_x_val()" id="load_more_button" type="button" class="btn btn-dark">Load More</button>
+
+    </div>
+    
   </body>
 </html>
