@@ -798,20 +798,28 @@ app.post("/search_movie",function(req,res){
         
         ]}
     console.log(req.body.search_value);
+    var the_name_of_the_movie_to_be_searched_in_lower_case = req.body.search_value.toLowerCase(); 
     for(var i = 0 ; i < list_of_all_movies.Sheet1.length ; i++)
     {
-        if(list_of_all_movies.Sheet1[i].Movie_name===req.body.search_value)
+        if((list_of_all_movies.Sheet1[i].Movie_name).includes(req.body.search_value))
         {
 
             the_found_movie_details.Sheet1.push(list_of_all_movies.Sheet1[i]);
-            the_found_movie_details.Sheet1.push({
+            
+            
+            flag_found = 1;
+        }
+    }
+    if(flag_found === 1)
+    {
+        the_found_movie_details.Sheet1.push({
             "Serial": "19",
             "Movie_name": "Spider-Man",
             "Star_rating": "3",
             "Year": "2002",
             "isFeatured": "FALSE"
         });
-            the_found_movie_details.Sheet1.push({
+        the_found_movie_details.Sheet1.push({
             "Serial": "45",
             "Movie_name": "Iron Man",
             "Star_rating": "4",
@@ -825,12 +833,6 @@ app.post("/search_movie",function(req,res){
             "Year": "2008",
             "isFeatured": "FALSE"
         });
-            flag_found = 1;
-            break;
-        }
-    }
-    if(flag_found === 1)
-    {
         res.render("home.ejs",{
         "list_of_movies"  : the_found_movie_details,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
