@@ -27,11 +27,12 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				var oldVal;
-				$('#value_of_input_first_name').on('change textInput input', function () {
+				$('#value_of_input_first_name,#value_of_input_email,#value_of_input_password').on('change textInput input', function () {
 				var val = this.value;
 				if (val !== oldVal) {
 				oldVal = val;
 				console.log("VALUE CHANGE TRIGGERED");
+				form_validation();
 				}
 				});
   			});
@@ -62,7 +63,7 @@
 					 <small id="message_for_wrong_password"></small><br>
 					 <!-- SUBMIT BUTTON -->
 					 <div id="submit-button-box">
-					 	<button id="form-btn-submit" type="button" class="btn btn-primary" onclick="form_validation()">SignUp</button>
+					 	<button id="form-btn-submit" type="button" class="btn btn-primary" onclick="form_validation_submit()">SignUp</button>
 					 </div>
 				</form>
 			 </div>

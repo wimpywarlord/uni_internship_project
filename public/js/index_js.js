@@ -1,14 +1,14 @@
+var indicator_1 = 0; 
+var indicator_2 = 0; 
+var indicator_3 = 0; 
+var indicator_4 = 0; 
+
 function form_validation()
 {
 	// $("#value_of_input_first_name").val();
 	console.log($("#value_of_input_first_name").val());	
 	console.log($("#value_of_input_email").val());	
 	console.log($("#value_of_input_password").val());
-
-	var indicator_1 = 0; 
-	var indicator_2 = 0; 
-	var indicator_3 = 0; 
-	var indicator_4 = 0; 
 
 	//VALIDATING NAME
 	// ^: Assert position at the beginning of the string
@@ -18,10 +18,10 @@ function form_validation()
 	// A-Z: A character in the range between "A" and "Z"
 	// $: Assert position at the end of the string (or before the line break at the end of the string, if any)
 
-	if(!/^[a-zA-Z]+$/.test($("#value_of_input_first_name").val()))
+	if(!/^([a-zA-Z]+\s)*[a-zA-Z]+$/.test($("#value_of_input_first_name").val()))
 	{
 		console.log("ALL ARE NOT CHARACTERS.");
-		$("#message_for_wrong_name").text("Must only contain alphabets.");
+		$("#message_for_wrong_name").text("Must only contain alphabets and ");
 		indicator_1=0;
 	}
 	else
@@ -46,33 +46,42 @@ function form_validation()
 
 	//VALIDATING PASSWORD
 
-	if(!/(.*[A-Z].*)(.*\d.*)/.test($("#value_of_input_password").val()))
-	{
-		console.log("DOES NOT HAVE A INT OR UPPER CASE");
-		$("#message_for_wrong_password").text("Password must contain a UpperCase letter and an integer.");
-		indicator_3 =0;
-	}
-	else
-	{
-		indicator_3 =1;
-		$("#message_for_wrong_password").text("");
-	}
-
-	if($("#value_of_input_password").val().length<8 )
+	if($("#value_of_input_password").val().length<8)
 	{
 		console.log("SMALL PASSWORD");
 		$("#message_for_wrong_password").text("Password must be 8 character long.");
-		indicator_4 =0 ;
+		indicator_4=0;
 		
 	}
 	else
 	{
+		indicator_4=1;
 		$("#message_for_wrong_password").text("");
 		indicator_4 = 1;
+			if(/^(.{0,7}|[^0-9]*|[^A-Z]*|[^a-z]*|[a-zA-Z0-9]*)$/.test($("#value_of_input_password").val()))
+			{
+				console.log("DOES NOT HAVE A INT OR UPPER CASE");
+				$("#message_for_wrong_password").text("Must contain a UpperCase,Lowercase ,number and a special character.");
+				indicator_3 =0;
+			}
+			else
+			{
+				indicator_3 =1;
+				$("#message_for_wrong_password").text("");
+			}
 	}
 
+
+
+	
+}
+
+
+function form_validation_submit(){
+		
 	if(indicator_1==1 && indicator_2==1 && indicator_3==1 & indicator_4==1)
 	{
 		$("#id_for_the_form").submit();
 	}
+
 }
