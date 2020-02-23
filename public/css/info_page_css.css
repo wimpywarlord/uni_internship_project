@@ -56,10 +56,13 @@ body
   font-family: 'Anton', sans-serif;
   text-transform: uppercase;
 }
-
-#year_of_the_movie
+#description_of_the_movie
 {
   font-size: 2vmax;  
+}
+#year_of_the_movie
+{
+  font-size: 3vmax;  
   font-family: 'Anton', sans-serif;
   text-transform: uppercase;
 }
