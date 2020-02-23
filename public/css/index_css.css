@@ -63,6 +63,12 @@ grid-row-gap: 0px;
 	color:white;
 	height: 100vh;
 }
+#id_for_the_form
+{
+	display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
 body
 {
 	background-color: #252323;
@@ -74,4 +80,5 @@ body
 .div3
 {
 	box-shadow: 0.1px 0.1px 15px 3px #F0F3F4 ;
+	display: table;
 }
