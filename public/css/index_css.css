@@ -59,8 +59,9 @@ grid-row-gap: 0px;
 
 .parent
 {
-	background-color: #212529;
+	background-color: #252323;
 	color:white;
+	height: 100%;
 }
 .div1
 {
