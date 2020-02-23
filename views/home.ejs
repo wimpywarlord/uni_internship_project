@@ -37,10 +37,14 @@
     <style type="text/css">
       #box_for_load_more_button
       {
-        background-color:  #212529;
+        background-color:  #252323;
         padding-bottom:  40px;
       }
       #load_more_button{
+        margin: 0 auto;
+      }
+      #load_more_form
+      {
         margin: 0 auto;
       }
     </style>
@@ -236,9 +240,20 @@
 		<%}%> -->
 
     <div id="box_for_all_the_cards">
-		<% var i =0;
-     while( i < 9 ) { 
-			console.log(i);
+		<% 
+
+    if(list_of_movies.Sheet1.length===100)
+    {
+
+     var i =0;
+
+     console.log(x,i);
+
+     while( i < 9*x &&  i < list_of_movies.Sheet1.length-3 ) 
+     { 
+
+		 console.log(i);
+
 			%>
       <div class="row all_rows_of_cards">
         <div class="col-lg-4 ">
@@ -251,7 +266,7 @@
                   <%=list_of_movies.Sheet1[i].Movie_name%>
                 </h5>
                 <div class="stars">
-					<%for(var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
+					<%for( var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
 					{
 						%>
 						
@@ -315,16 +330,106 @@
           </div>
         </div>
       </div>
-
+      <div class="row" id="box_for_load_more_button">
+      <form id="load_more_form" action="/load_more" method="POST"> 
+        <button id="load_more_button" type="submit" class="btn btn-dark">Load More</button>
+      </form>
+    </div>
       <%
       i=i+3;
-       } %>
-    </div>
-    <div class="row" id="box_for_load_more_button">
-      
-      <button onclick="increase_x_val()" id="load_more_button" type="button" class="btn btn-dark">Load More</button>
+       } 
 
+     }else{
+     console.log("REACHED THE ELSE SECTION");
+     console.log(list_of_movies.Sheet1.length);
+     var i =0;
+     console.log(i);
+    while(i < list_of_movies.Sheet1.length-3)
+    {
+
+
+    %>
+
+    <div class="row all_rows_of_cards">
+        <div class="col-lg-4 ">
+          <div class="vertical_1">
+            <div class="card" style="height:22rem;width: 18rem;">
+              <div class="card-img-block">
+        <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%=list_of_movies.Sheet1[i].Movie_name%>
+                </h5>
+                <div class="stars">
+          <%for( var j =0 ; j< list_of_movies.Sheet1[i].Star_rating ; j++ )
+          {
+            %>
+            
+            <i class="fas fa-star"></i>
+            
+          <%}%>
+                </div>
+        <form id="info_symbol_form_<%=i%>" action="/info_page/<%=list_of_movies.Sheet1[i].Movie_name%>/<%=list_of_movies.Sheet1[i].Star_rating%>/<%=list_of_movies.Sheet1[i].Year%>" method="GET">
+          <button onclick="info_symbol_1(<%=i%>)" type="button" class="btn btn-dark">info</button>
+         </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 ">
+          <div class="vertical_2">
+            <div class="card" style="height:22rem;width: 18rem;">
+              <div class="card-img-block">
+        <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+          <%=list_of_movies.Sheet1[i+1].Movie_name%>
+                </h5>
+                <div class="stars">
+          <%for(var j =0 ; j< list_of_movies.Sheet1[i+1].Star_rating ; j++ )
+          {
+            %>
+            <i class="fas fa-star"></i>
+          <%}%>
+                </div>
+                <form id="info_symbol_form_<%=i+1%>" action="/info_page/<%=list_of_movies.Sheet1[i+1].Movie_name%>/<%=list_of_movies.Sheet1[i+1].Star_rating%>/<%=list_of_movies.Sheet1[i+1].Year%>" method="GET">
+          <button onclick="info_symbol_2(<%=i%>)" type="button" class="btn btn-dark">info</button>
+         </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 ">
+          <div class="vertical_3">
+            <div class="card" style="height:22rem;width: 18rem;">
+              <div class="card-img-block">
+        <img src="<%= '/photos/' + list_of_all_the_thumbnails[Math.floor(Math.random()* (23 - 0) + 0)] + '.jpg'%>" class="card-img-top" alt="MOVIE">              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+          <%=list_of_movies.Sheet1[i+2].Movie_name%>
+                </h5>
+                <div class="stars">
+          <%for(var j =0 ; j< list_of_movies.Sheet1[i+2].Star_rating ; j++ )
+          {
+            %>
+            
+            <i class="fas fa-star"></i>
+            
+          <%}%>
+                </div>
+        <form id="info_symbol_form_<%=i+2%>" action="/info_page/<%=list_of_movies.Sheet1[i+2].Movie_name%>/<%=list_of_movies.Sheet1[i+2].Star_rating%>/<%=list_of_movies.Sheet1[i+2].Year%>" method="GET">
+          <button onclick="info_symbol_3(<%=i%>)" type="button" class="btn btn-dark">info</button>
+         </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <%
+    i = i +3;
+    }
+    }%>
     </div>
-    
   </body>
 </html>
