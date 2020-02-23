@@ -28,6 +28,39 @@
       crossorigin="anonymous"
     ></script>
 
+    <script type="text/javascript">
+     window.addEventListener('load', function(){
+         // alert('<%= sort %>');
+         if('<%= sort %>' === 'by_name')
+         {
+
+            // IN CASE U WANT TO ADD BETTER INDICATOR FOR THE SORT ADD IT HERE
+            console.log("BY NAME ACTIVATED");
+            $("#decorations_of_by_name_sort").css(
+              {"color":"red",});
+            // PASS A CSS OBJECT IN THE ABOVE FUNCTION
+         }
+         if('<%= sort %>' === 'by_year')
+         {
+            
+            // IN CASE U WANT TO ADD BETTER INDICATOR FOR THE SORT ADD IT HERE
+            console.log("BY NAME ACTIVATED");
+            $("#decorations_of_by_name_sort").css(
+              {"color":"red",})
+            // PASS A CSS OBJECT IN THE ABOVE FUNCTION
+         }
+         if('<%= sort %>' === 'by_rating')
+         {
+          // IN CASE U WANT TO ADD BETTER INDICATOR FOR THE SORT ADD IT HERE
+            console.log("BY RATING ACTIVATED");
+            console.log("BY NAME ACTIVATED");
+            $("#decorations_of_by_name_sort").css(
+              {"color":"red",})
+            // PASS A CSS OBJECT IN THE ABOVE FUNCTION
+         }
+     });
+</script>
+
     <!-- FONT AWSOME -->
     <script src="https://use.fontawesome.com/47a92560c0.js"></script>
     <link

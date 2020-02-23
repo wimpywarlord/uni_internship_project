@@ -779,6 +779,7 @@ app.post("/home",function(req,res){
 
 	// console.log(req.body.email);
 	res.render("home.ejs",{
+        "sort" : "none",
         "x" : x,
         "list_of_movies"  : list_of_all_movies,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -791,6 +792,7 @@ app.get("/home",function(req,res){
 
     // console.log(req.body.email);
     res.render("home.ejs",{
+        "sort" : "none",
         "x" : x,
         "list_of_movies"  : list_of_all_movies,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -805,6 +807,7 @@ app.post("/home_sort_by_name",function(req,res){
     };
 
     res.render("home.ejs",{
+        "sort" : "by_name",
         "x" : x,
         "list_of_movies"  : list_of_all_movies_sorted_by_movie_name,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -821,6 +824,7 @@ app.get("/home_sort_by_name",function(req,res){
     };
 
     res.render("home.ejs",{
+        "sort" : "by_name",
         "x" : x,
         "list_of_movies"  : list_of_all_movies_sorted_by_movie_name,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -911,6 +915,7 @@ app.post("/search_movie",function(req,res){
             "isFeatured": "FALSE"
         });
         res.render("home.ejs",{
+        "sort" : "none",
         "x" : x,
         "list_of_movies"  : the_found_movie_details,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -919,6 +924,7 @@ app.post("/search_movie",function(req,res){
     else
     {
         res.render("home.ejs",{
+        "sort" : "none",
         "x" : x,
         "list_of_movies"  : list_of_all_movies,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -1008,6 +1014,7 @@ app.get("/search_movie",function(req,res){
             "isFeatured": "FALSE"
         });
         res.render("home.ejs",{
+        "sort" : "none",    
         "x" : x,
         "list_of_movies"  : the_found_movie_details,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -1016,6 +1023,7 @@ app.get("/search_movie",function(req,res){
     else
     {
         res.render("home.ejs",{
+        "sort" : "none",
         "x" : x,
         "list_of_movies"  : list_of_all_movies,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -1034,6 +1042,7 @@ app.post("/home_sort_by_year",function(req,res){
     // console.log(list_of_all_movies.Sheet1.length);
 
     res.render("home.ejs",{
+        "sort" : "by_year",
         "x" : x,
         "list_of_movies"  : list_of_all_movies_sorted_by_year,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -1051,6 +1060,7 @@ app.get("/home_sort_by_year",function(req,res){
     // console.log(list_of_all_movies.Sheet1.length);
 
     res.render("home.ejs",{
+        "sort" : "by_year",
         "x" : x,
         "list_of_movies"  : list_of_all_movies_sorted_by_year,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -1066,6 +1076,7 @@ app.post("/home_sort_by_rating",function(req,res){
     // console.log(list_of_all_movies_sorted_by_star_rating);
 
     res.render("home.ejs",{
+        "sort" : "by_rating",
         "x" : x,
         "list_of_movies"  : list_of_all_movies_sorted_by_star_rating,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
@@ -1081,6 +1092,7 @@ app.get("/home_sort_by_rating",function(req,res){
     // console.log(list_of_all_movies_sorted_by_star_rating);
 
     res.render("home.ejs",{
+        "sort" : "by_rating",
         "x" : x,
         "list_of_movies"  : list_of_all_movies_sorted_by_star_rating,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
