@@ -743,6 +743,13 @@ var list_of_all_movies =
     ]
 };
 
+var x = 1;
+
+function increase_value_of_x()
+{
+    x= x +1 ;
+}
+
 var list_of_all_the_thumbnails = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w"];
 
 
@@ -765,11 +772,28 @@ app.post("/logout",function(req,res)
     });
 
 
+
+
 app.post("/home",function(req,res){
 
 
 	// console.log(req.body.email);
 	res.render("home.ejs",{
+        "sort" : "none",
+        "x" : x,
+        "list_of_movies"  : list_of_all_movies,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    });
+
+});
+
+app.get("/home",function(req,res){
+
+
+    // console.log(req.body.email);
+    res.render("home.ejs",{
+        "sort" : "none",
+        "x" : x,
         "list_of_movies"  : list_of_all_movies,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
     });
@@ -783,6 +807,25 @@ app.post("/home_sort_by_name",function(req,res){
     };
 
     res.render("home.ejs",{
+        "sort" : "by_name",
+        "x" : x,
+        "list_of_movies"  : list_of_all_movies_sorted_by_movie_name,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    });
+
+    // console.log(list_of_all_movies_sorted_by_movie_name);
+    console.log("THIS IS SORT BY NAME");
+});
+
+app.get("/home_sort_by_name",function(req,res){
+
+    var list_of_all_movies_sorted_by_movie_name = {
+    "Sheet1" : list_of_all_movies.Sheet1.sort((a, b) => (a.Movie_name > b.Movie_name) ? 1 : -1),
+    };
+
+    res.render("home.ejs",{
+        "sort" : "by_name",
+        "x" : x,
         "list_of_movies"  : list_of_all_movies_sorted_by_movie_name,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
     });
@@ -797,21 +840,59 @@ app.post("/search_movie",function(req,res){
     var the_found_movie_details = { Sheet1 : [
         
         ]}
-    console.log(req.body.search_value);
+    console.log(req.body.search_value+"$$$$$$");
     var the_name_of_the_movie_to_be_searched_in_lower_case = req.body.search_value.toLowerCase(); 
     for(var i = 0 ; i < list_of_all_movies.Sheet1.length ; i++)
     {
-        if((list_of_all_movies.Sheet1[i].Movie_name.toLowerCase()).includes(req.body.search_value))
+        // console.log(list_of_all_movies.Sheet1[i].Movie_name.toLowerCase());
+        if((list_of_all_movies.Sheet1[i].Movie_name.toLowerCase()).includes(the_name_of_the_movie_to_be_searched_in_lower_case))
         {
 
             the_found_movie_details.Sheet1.push(list_of_all_movies.Sheet1[i]);
-            
+            // console.log("ALTEAST ONE FOUND");
             
             flag_found = 1;
         }
     }
     if(flag_found === 1)
     {
+        // console.log("FOUND");
+
+        the_found_movie_details.Sheet1.push({
+            "Serial": "14",
+            "Movie_name": "Harry Potter and the Chamber of Secrets",
+            "Star_rating": "3",
+            "Year": "2002",
+            "isFeatured": "TRUE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "52",
+            "Movie_name": "Star Wars: The Force Awakens",
+            "Star_rating": "1",
+            "Year": "2015",
+            "isFeatured": "TRUE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "29",
+            "Movie_name": "Up",
+            "Star_rating": "3",
+            "Year": "2009",
+            "isFeatured": "TRUE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "70",
+            "Movie_name": "Captain America: Civil War",
+            "Star_rating": "4",
+            "Year": "2016",
+            "isFeatured": "TRUE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "6",
+            "Movie_name": "Pirates of the Caribbean: At World's End",
+            "Star_rating": "2",
+            "Year": "2007",
+            "isFeatured": "TRUE"
+        });
         the_found_movie_details.Sheet1.push({
             "Serial": "19",
             "Movie_name": "Spider-Man",
@@ -834,6 +915,8 @@ app.post("/search_movie",function(req,res){
             "isFeatured": "FALSE"
         });
         res.render("home.ejs",{
+        "sort" : "none",
+        "x" : x,
         "list_of_movies"  : the_found_movie_details,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
         });
@@ -841,6 +924,107 @@ app.post("/search_movie",function(req,res){
     else
     {
         res.render("home.ejs",{
+        "sort" : "none",
+        "x" : x,
+        "list_of_movies"  : list_of_all_movies,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+        });      
+    }
+
+});
+
+app.get("/search_movie",function(req,res){
+
+    var flag_found = 0;
+    var the_found_movie_details = { Sheet1 : [
+        
+        ]}
+    console.log(req.body.search_value+"$$$$$$");
+    var the_name_of_the_movie_to_be_searched_in_lower_case = req.body.search_value.toLowerCase(); 
+    for(var i = 0 ; i < list_of_all_movies.Sheet1.length ; i++)
+    {
+        console.log(list_of_all_movies.Sheet1[i].Movie_name.toLowerCase());
+        if((list_of_all_movies.Sheet1[i].Movie_name.toLowerCase()).includes(the_name_of_the_movie_to_be_searched_in_lower_case))
+        {
+
+            the_found_movie_details.Sheet1.push(list_of_all_movies.Sheet1[i]);
+            console.log("ALTEAST ONE FOUND");
+            
+            flag_found = 1;
+        }
+    }
+    if(flag_found === 1)
+    {
+        console.log("FOUND");
+
+        the_found_movie_details.Sheet1.push({
+            "Serial": "14",
+            "Movie_name": "Harry Potter and the Chamber of Secrets",
+            "Star_rating": "3",
+            "Year": "2002",
+            "isFeatured": "TRUE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "52",
+            "Movie_name": "Star Wars: The Force Awakens",
+            "Star_rating": "1",
+            "Year": "2015",
+            "isFeatured": "TRUE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "29",
+            "Movie_name": "Up",
+            "Star_rating": "3",
+            "Year": "2009",
+            "isFeatured": "TRUE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "70",
+            "Movie_name": "Captain America: Civil War",
+            "Star_rating": "4",
+            "Year": "2016",
+            "isFeatured": "TRUE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "6",
+            "Movie_name": "Pirates of the Caribbean: At World's End",
+            "Star_rating": "2",
+            "Year": "2007",
+            "isFeatured": "TRUE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "19",
+            "Movie_name": "Spider-Man",
+            "Star_rating": "3",
+            "Year": "2002",
+            "isFeatured": "FALSE"
+        });
+        the_found_movie_details.Sheet1.push({
+            "Serial": "45",
+            "Movie_name": "Iron Man",
+            "Star_rating": "4",
+            "Year": "2008",
+            "isFeatured": "FALSE"
+        });
+            the_found_movie_details.Sheet1.push({
+            "Serial": "22",
+            "Movie_name": "Indiana Jones and the Kingdom of the Crystal Skull",
+            "Star_rating": "4",
+            "Year": "2008",
+            "isFeatured": "FALSE"
+        });
+        res.render("home.ejs",{
+        "sort" : "none",    
+        "x" : x,
+        "list_of_movies"  : the_found_movie_details,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+        });
+    }
+    else
+    {
+        res.render("home.ejs",{
+        "sort" : "none",
+        "x" : x,
         "list_of_movies"  : list_of_all_movies,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
         });      
@@ -858,6 +1042,26 @@ app.post("/home_sort_by_year",function(req,res){
     // console.log(list_of_all_movies.Sheet1.length);
 
     res.render("home.ejs",{
+        "sort" : "by_year",
+        "x" : x,
+        "list_of_movies"  : list_of_all_movies_sorted_by_year,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    });
+    console.log("THIS IS SORT BY YEAR");
+});
+
+app.get("/home_sort_by_year",function(req,res){
+
+    var list_of_all_movies_sorted_by_year = {
+    "Sheet1" : list_of_all_movies.Sheet1.sort((a, b) => (a.Year > b.Year) ? 1 : -1),
+    };
+    // console.log(list_of_all_movies_sorted_by_year);
+
+    // console.log(list_of_all_movies.Sheet1.length);
+
+    res.render("home.ejs",{
+        "sort" : "by_year",
+        "x" : x,
         "list_of_movies"  : list_of_all_movies_sorted_by_year,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
     });
@@ -872,6 +1076,24 @@ app.post("/home_sort_by_rating",function(req,res){
     // console.log(list_of_all_movies_sorted_by_star_rating);
 
     res.render("home.ejs",{
+        "sort" : "by_rating",
+        "x" : x,
+        "list_of_movies"  : list_of_all_movies_sorted_by_star_rating,
+        "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
+    }); 
+    console.log("THIS IS SORT BY RATING");
+});
+
+app.get("/home_sort_by_rating",function(req,res){
+
+    var list_of_all_movies_sorted_by_star_rating = {
+    "Sheet1" : list_of_all_movies.Sheet1.sort((a, b) => (a.Star_rating < b.Star_rating) ? 1 : -1),
+    } ;
+    // console.log(list_of_all_movies_sorted_by_star_rating);
+
+    res.render("home.ejs",{
+        "sort" : "by_rating",
+        "x" : x,
         "list_of_movies"  : list_of_all_movies_sorted_by_star_rating,
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
     }); 
@@ -885,11 +1107,19 @@ app.get("/info_page/:Movie_name/:Star_rating/:Year",function(req,res){
     console.log(details_of_the_movie);
     // console.log(details_of_the_movie);
     res.render("info_page.ejs",{
+        "x": x ,
         "list_of_featured_movies" : list_of_featured_movies, 
         "list_of_all_the_thumbnails" : list_of_all_the_thumbnails,
         "details_of_the_movie" : details_of_the_movie,
     });
     console.log("THE POST REQUEST WAS CAUGHT FOR ANY MOVIE");
+});
+
+app.post("/load_more",function(req,res){
+    increase_value_of_x();
+    console.log(x)
+    console.log(req.get('referer'));
+    res.redirect(req.get('referer'));
 });
 
 app.get("/test",function(req,res){

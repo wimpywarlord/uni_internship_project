@@ -21,7 +21,7 @@ function form_validation()
 	if(!/^([a-zA-Z]+\s)*[a-zA-Z]+$/.test($("#value_of_input_first_name").val()))
 	{
 		console.log("ALL ARE NOT CHARACTERS.");
-		$("#message_for_wrong_name").text("Must only contain alphabets and ");
+		$("#message_for_wrong_name").text("Must only contain alphabets and spaces.");
 		indicator_1=0;
 	}
 	else

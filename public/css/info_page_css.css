@@ -52,14 +52,17 @@ body
 
 #heading_of_the_card
 {
-  font-size: 4vw;
+  font-size: 4vmax;
   font-family: 'Anton', sans-serif;
   text-transform: uppercase;
 }
-
+#description_of_the_movie
+{
+  font-size: 2vmax;  
+}
 #year_of_the_movie
 {
-  font-size: 2vw;  
+  font-size: 3vmax;  
   font-family: 'Anton', sans-serif;
   text-transform: uppercase;
 }
