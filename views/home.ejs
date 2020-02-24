@@ -35,8 +35,10 @@
          {
             // IN CASE U WANT TO ADD BETTER INDICATOR FOR THE SORT ADD IT HERE
             console.log("BY NAME ACTIVATED");
-            $("#decorations_of_by_name_sort").css(
-              {"color":"red",});
+            $("#post_selection_for_home_sort_by_name").addClass('underline');
+            $("#post_selection_for_home_sort_by_year").removeClass('underline');
+            $("#post_selection_for_home_sort_by_rating").removeClass('underline');
+
             // PASS A CSS OBJECT IN THE ABOVE FUNCTION
          }
          if('<%= sort %>' === 'by_year')
@@ -44,16 +46,18 @@
             
             // IN CASE U WANT TO ADD BETTER INDICATOR FOR THE SORT ADD IT HERE
             console.log("BY YEAR ACTIVATED");
-            $("#decorations_of_by_year_sort").css(
-              {"color":"red",})
+            $("#post_selection_for_home_sort_by_name").removeClass('underline');
+            $("#post_selection_for_home_sort_by_year").addClass('underline');
+            $("#post_selection_for_home_sort_by_rating").removeClass('underline');
             // PASS A CSS OBJECT IN THE ABOVE FUNCTION
          }
          if('<%= sort %>' === 'by_rating')
          {
           // IN CASE U WANT TO ADD BETTER INDICATOR FOR THE SORT ADD IT HERE
             console.log("BY RATING ACTIVATED");
-            $("#decorations_of_by_rating_sort").css(
-              {"color":"red",})
+            $("#post_selection_for_home_sort_by_name").removeClass('underline');
+            $("#post_selection_for_home_sort_by_year").removeClass('underline');
+            $("#post_selection_for_home_sort_by_rating").addClass('underline');
             // PASS A CSS OBJECT IN THE ABOVE FUNCTION
          }
      });
@@ -226,7 +230,7 @@
       <ul class="menu__list">
         <li class="menu__group">
           <form
-            class="menu__link"
+            class="menu__link byname"
             id="post_selection_for_home_sort_by_name"
             action="/home_sort_by_name"
             method="POST"
