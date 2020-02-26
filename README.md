@@ -6,7 +6,7 @@
 
 Here to build a small project as a test for UNI internship. For starters it will be a movie suggesting/featuring website , lets see where it goes after that.
 
-Link to the website : https://movifyme.herokuapp.com/
+Link to the website : https://deceptiform.herokuapp.com/lawyer_form_intake
 
 ## Getting Started
 
