@@ -333,9 +333,19 @@ EFFECT FADING OUT FOR SIBLINGS MENU OPTIONS
 	transition-duration: .2s;
   }
   
-
-  /*sorting bar design end*/
+   .menu__link.underline::after{
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: #fff;
   
+	will-change: width;
+	transition: width .1s ease-out;
+  
+	position: absolute;
+	bottom: 0;
+  } 
+   
  
   
 .vertical_1

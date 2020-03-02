@@ -33,11 +33,12 @@
          // alert('<%= sort %>');
          if('<%= sort %>' === 'by_name')
          {
-
             // IN CASE U WANT TO ADD BETTER INDICATOR FOR THE SORT ADD IT HERE
             console.log("BY NAME ACTIVATED");
-            $("#decorations_of_by_name_sort").css(
-              {"color":"red",});
+            $("#post_selection_for_home_sort_by_name").addClass('underline');
+            $("#post_selection_for_home_sort_by_year").removeClass('underline');
+            $("#post_selection_for_home_sort_by_rating").removeClass('underline');
+
             // PASS A CSS OBJECT IN THE ABOVE FUNCTION
          }
          if('<%= sort %>' === 'by_year')
@@ -45,16 +46,18 @@
             
             // IN CASE U WANT TO ADD BETTER INDICATOR FOR THE SORT ADD IT HERE
             console.log("BY YEAR ACTIVATED");
-            $("#decorations_of_by_year_sort").css(
-              {"color":"red",})
+            $("#post_selection_for_home_sort_by_name").removeClass('underline');
+            $("#post_selection_for_home_sort_by_year").addClass('underline');
+            $("#post_selection_for_home_sort_by_rating").removeClass('underline');
             // PASS A CSS OBJECT IN THE ABOVE FUNCTION
          }
          if('<%= sort %>' === 'by_rating')
          {
           // IN CASE U WANT TO ADD BETTER INDICATOR FOR THE SORT ADD IT HERE
             console.log("BY RATING ACTIVATED");
-            $("#decorations_of_by_rating_sort").css(
-              {"color":"red",})
+            $("#post_selection_for_home_sort_by_name").removeClass('underline');
+            $("#post_selection_for_home_sort_by_year").removeClass('underline');
+            $("#post_selection_for_home_sort_by_rating").addClass('underline');
             // PASS A CSS OBJECT IN THE ABOVE FUNCTION
          }
      });
@@ -273,19 +276,13 @@
 
     <div id="box_for_all_the_cards">
 		<% 
-
     if(list_of_movies.Sheet1.length===100)
     {
-
      var i =0;
-
      console.log(x,i);
-
      while( i < 9*x &&  i < list_of_movies.Sheet1.length-3 ) 
      { 
-
 		 console.log(i);
-
 			%>
       <div class="row all_rows_of_cards">
         <div class="col-lg-4 ">
@@ -370,7 +367,6 @@
       <%
       i=i+3;
        } 
-
      }else{
      console.log("REACHED THE ELSE SECTION");
      console.log(list_of_movies.Sheet1.length);
@@ -378,10 +374,7 @@
      console.log(i);
     while(i < list_of_movies.Sheet1.length-3)
     {
-
-
     %>
-
     <div class="row all_rows_of_cards">
         <div class="col-lg-4 ">
           <div class="vertical_1">
@@ -457,7 +450,6 @@
           </div>
         </div>
       </div>
-
     <%
     i = i +3;
     }
